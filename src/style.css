@@ -2,3 +2,17 @@
     padding: 0px;
     margin: 0px;
   }
+  @media screen and (min-width: 320px) and (max-width: 414px) and (orientation: portrait) {
+    .headerContent{
+      display: flex;
+    }
+
+    .content{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contentTitles{
+      display: flex;
+    }
+  }
