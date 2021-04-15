@@ -10,7 +10,7 @@ export const aisles = () =>{
    </header>
    <main class="mainContentAisles">
      <input type="search" placeholder="¿Qué productos buscas hoy?" class="search"><img src="./image/search.svg" alt="buscar" class="searchImg">
-       <img id="aisleDeals" class="aisleDeals" src="./image/pasilloOfertas.svg" type="button"> 
+       <img id="aisleDeals" class="aisleDeals" src="./image/PasilloOfertas.svg" type="button"> 
        <img id="meatAisle" class="meatAisle" src="./image/pasilloCarne.svg" type="button"> 
        <img id="drinksAisle" class="drinksAisle" src="./image/pasilloBebidas.svg" type="button"> 
        <img id="dairyAisle" class="dairyAisle" src="./image/pasilloLacteos.svg" type="button"> 
