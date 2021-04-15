@@ -18,7 +18,14 @@ export const home = () => {
   </header>
   <main class="mainContent">
       <input type="search" placeholder="¿Qué productos buscas hoy?" class="search"><img src="./image/search.svg" alt="buscar" class="searchImg">
-      <img src="./image/cheque ahorro.png" alt="puntos MiClub" class="savingCheck">
+      <div class="slider">
+      <ul>
+      <li><img src="./image/cheque ahorro.png" alt="puntos MiClub" class="savingCheck"></li>
+      <li><img src="./image/liderBCI.svg" alt="puntos MiClub" class="savingCheck"></li>
+      <li><img src="./image/covid1.png" alt="puntos MiClub" class="savingCheck"></li>
+      <li><img src="./image/esenciales.svg" alt="puntos MiClub" class="savingCheck"></li>
+      </ul>
+      </div>
       <img src="./image/mislistas1.png" alt="listas" class="lists">
       <h2 class="tPMCTitle">Tus productos Más Comprados</h2><h4 class="moreTitle" id="forwardTPMC">Ver más</h4>
       <div id="table" class= "contTPMCHome">
@@ -37,6 +44,7 @@ export const home = () => {
 `;
 
   divHome.innerHTML = viewHome;
+
 let dataProducts = data.results
 let homeProducts=[];
 homeProducts = dataProducts.splice(4,3);
@@ -55,7 +63,7 @@ function allProducts(homeProducts){
  let amount = document.createElement("P");
  let addImg = document.createElement("IMG");
  let addList = document.createElement("IMG");
- tarjeta.setAttribute("class", "cell");
+ tarjeta.setAttribute("class", "cellHome");
  tarjeta.setAttribute("id", "card");
  image.setAttribute("src", homeProducts[i].img);
  image.setAttribute("class", "image");

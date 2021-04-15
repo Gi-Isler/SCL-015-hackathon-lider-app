@@ -63,7 +63,8 @@
 
     .savingCheck{
       margin-top: 3vh;
-      margin-left: 2.5vw;
+      margin-left: 1vw;
+      margin-right: -0.2vw;
       margin-bottom: 14px;
       width: 95vw;
       height: 12vh;
@@ -148,7 +149,13 @@
       height: 34vh;
       margin-top: 2vh;
     }
-
+    .cellHome{
+      width: 105px;
+      height: 225px;;
+      background: #FFFFFF;
+      border-radius: 8px;
+    }
+  
     /* Template Tus Listas */
     .myList{
       width: 100vw;
@@ -282,14 +289,14 @@
     }
 
     .price{
-    font-family: Bogle;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 22px;
-    color: #000;
-    margin-left: 5px;
-    margin-top: 2px;
+      font-family: Bogle;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: #000;
+      margin-left: 5px;
+      margin-top: 2px;
     }
 
     .amount{
@@ -353,7 +360,44 @@
       top:6vh;
     }
 
-
+   /* Slider */
+   .slider {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider ul {
+    display: flex;
+    padding: -4px;
+    width: 400%;
+    
+    animation: cambio 20s infinite alternate linear;
+  }
+  
+  .slider li {
+    width: 100%;
+    list-style: none;
+  }
+  
+  .slider img {
+    width: 94vw;
+  }
+  
+  @keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+  }
+  
 
 
 
