@@ -8,48 +8,98 @@ export const superLista = () =>{
         <img src="./image/backArrow.svg" alt="Retroceder" class="arrowback">
         <h3 id="titleTPMC" class="titleTPMC">Super Lista</h3>
         <img src="./image/carrito_header.svg" alt="carrito" class="cart">
-      </div>   
-      ` 
-      divtpmc.innerHTML=viewsuperLista;
-      let table = divsuperLista.querySelector('#products');
+      </div>
+    </div>   
+  </header>
+  <main class="mainProducts">
+    <div class="products" id="products"></div> 
+  </main>
+  <footer class="navBar">
+  <div class="navBarIcons">
+  <img src="./image/home.svg" alt="" id="home">
+  <img src="./image/pasillos.svg" alt="" id="aisles">
+  <img src="./image/list.svg" alt="" id="list">
+  <img src="./image/profile.svg" alt="" id="profile">
+  </div>
+  </footer>
+
+      `; 
+
+      divsuperLista.innerHTML=viewsuperLista;
+      let tableSL = divsuperLista.querySelector('#products');
       let dataSuperList= data.results
       for (let i = 0; i < dataSuperList.length; i++) {
-      let tarjeta = document.createElement("DIV");
-      let image = document.createElement("IMG");
-      let name = document.createElement("P");
-      let price = document.createElement("P");
-      let amount = document.createElement("P");
-      let addImg = document.createElement("IMG");
-      let addList = document.createElement("BUTTON");
-      tarjeta.setAttribute("class", "cell");
-      tarjeta.setAttribute("id", "card");
-      image.setAttribute("src", dataSuperList[i].img);
-      image.setAttribute("class", "image");
-      name.setAttribute("class", "name");
-      price.setAttribute("class", "price");
-      amount.setAttribute("class", "amout");
-      addImg.setAttribute("class", "addImg");
-      image.setAttribute("src", "../../image/addList.svg");
-      addImg.setAttribute("id", "addImg");
-      addList.setAttribute("class", "addList");
-      addList.setAttribute("id", "addList");
-      name.innerHTML =dataSuperList[i].Titulo;
-      price.innerHTML =dataSuperList[i].Precio;
-      amount.innerHTML =dataSuperList[i].cantidaddataSuperList[i]["Unidad de Medida"];
-      addList.innerHTML = 
-      table.appendChild(tarjeta);
-      tarjeta.appendChild(image);
-      tarjeta.appendChild(name);
-      tarjeta.appendChild(price);
-      tarjeta.appendChild(amount);
-      addList.innerHTML = "Agregar al carrito"
-      table.appendChild(tarjeta);
-      tarjeta.appendChild(image);
-      tarjeta.appendChild(name);
-      tarjeta.appendChild(price);
-      tarjeta.appendChild(amount);
-      tarjeta.appendChild(addList);
+      let tarjetaSL = document.createElement("DIV");
+      let heartSL = document.createElement("IMG");
+      let imageSL = document.createElement("IMG");
+      let nameSL = document.createElement("P");
+      let priceSL = document.createElement("P");
+      let amountSL = document.createElement("P");
+      let addCartSL = document.createElement("IMG");
+      tarjetaSL.setAttribute("class", "cellSL");
+      tarjetaSL.setAttribute("id", "cardSL");
+      heartSL.setAttribute("src","./image/emptyHeart.svg");
+      heartSL.setAttribute("class", "heartSL");
+      imageSL.setAttribute("src", dataSuperList[i].img);
+      imageSL.setAttribute("class", "imageSL");
+      nameSL.setAttribute("class", "nameSL");
+      priceSL.setAttribute("class", "priceSL");
+      amountSL.setAttribute("class", "amoutSL");
+      addCartSL.setAttribute("src", "./image/addCart.svg");
+      addCartSL.setAttribute("class", "addCartSL");
+      addCartSL.setAttribute("id", "addCartSL");
+      nameSL.innerHTML =dataSuperList[i].Titulo;
+      priceSL.innerHTML =dataSuperList[i].Precio;
+      amountSL.innerHTML =dataSuperList[i].cantidad+dataSuperList[i]["Unidad de Medida"];
+      tableSL.appendChild(tarjetaSL);
+      tarjetaSL.appendChild(heartSL);
+      tarjetaSL.appendChild(imageSL);
+      tarjetaSL.appendChild(nameSL);
+      tarjetaSL.appendChild(priceSL);
+      tarjetaSL.appendChild(amountSL);
+      tableSL.appendChild(tarjetaSL);
+      tarjetaSL.appendChild(imageSL);
+      tarjetaSL.appendChild(nameSL);
+      tarjetaSL.appendChild(priceSL);
+      tarjetaSL.appendChild(amountSL);
+      tarjetaSL.appendChild(addCartSL);
 
-      return divsuperLista; 
+//aqui le decimos a la tarjeta que cuando oiga click ejecute la funcion que muestra el modal
+      tarjetaSL.onclick = function () {
+        addModal(info[i]);
+      }
     }
-} 
+
+
+      //boton volver
+let back = divsuperLista.querySelector("#arrow");
+back.addEventListener("click", () => {
+  location.assign("#/");
+});
+
+//botones navBar
+let home = divsuperLista.querySelector("#home");
+home.addEventListener("click", () => {
+  location.assign("#/");
+});loca
+
+let viewAisles = divsuperLista.querySelector("#aisles");
+viewAisles.addEventListener("click", () => {
+  location.assign("#/pasillos");
+});
+
+let viewLists = divsuperLista.querySelector("#list");
+viewLists.addEventListener("click", () => {
+  location.assign("#/tusListas");
+});
+
+let viewProfile = divsuperLista.querySelector("#profile");
+viewProfile.addEventListener("click", () => {
+  location.assign("#/perfil");
+});
+
+return divsuperLista; 
+
+
+}
+

@@ -21,25 +21,48 @@ export const home = () => {
       <input type="search" placeholder="¿Qué productos buscas hoy?" class="search"><img src="./image/search.svg" alt="buscar" class="searchImg">
       <img src="./image/cheque ahorro.png" alt="puntos MiClub" class="savingCheck">
       <img src="./image/mislistas1.png" alt="listas" class="lists">
-      <h2 class="tPMCTitle">Tus productos Más Comprados</h2><h4 class="moreTitle">Ver más</h4>
+      <h2 class="tPMCTitle">Tus productos Más Comprados</h2><h4 class="moreTitle" id="forwardTPMC">Ver más</h4>
       <div>
         <!-- Contenido dinamico -->
       </div>
   </main>
   <footer class="navBar">
   <div class="navBarIcons">
-      <img src="./image/home.svg" alt="">
-      <img src="./image/pasillos.svg" alt="">
-      <img src="./image/list.svg" alt="">
-      <img src="./image/profile.svg" alt="">
+      <img src="./image/home.svg" alt="" id="home">
+      <img src="./image/pasillos.svg" alt="" id="aisles">
+      <img src="./image/list.svg" alt="" id="list">
+      <img src="./image/profile.svg" alt="" id="profile">
     </div>
   </footer>
     
 `;
 
   divHome.innerHTML = viewHome;
-  
 
+let goTPMC = divHome.querySelector('#forwardTPMC');
+goTPMC.addEventListener("click",() => {
+  location.assign("#/tpmc");
+})
+
+  let home = divHome.querySelector("#home");
+  home.addEventListener("click", () => {
+    location.assign("#/");
+  });
+
+  let viewAisles = divHome.querySelector("#aisles");
+  viewAisles.addEventListener("click", () => {
+    location.assign("#/pasillos");
+  });
+
+  let viewLists = divHome.querySelector("#list");
+  viewLists.addEventListener("click", () => {
+    location.assign("#/tusListas");
+  });
+
+  let viewProfile = divHome.querySelector("#profile");
+  viewProfile.addEventListener("click", () => {
+    location.assign("#/perfil");
+  });
 
   
 

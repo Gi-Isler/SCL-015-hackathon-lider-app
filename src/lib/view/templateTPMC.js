@@ -1,11 +1,13 @@
 import data from "../data/carolinaData.js"
 export const tpmc = () =>{
   const divtpmc = document.createElement("div");
+  divtpmc.setAttribute('CLASS','tpmc');
+
   const viewtpmc = `
   <header class="headerTPMC">
     <div class="contentTPMC">
       <div class="contentTPMC">
-        <img src="./image/backArrow.svg" alt="Retroceder" class="arrowback">
+        <img src="./image/backArrow.svg" alt="Retroceder" class="arrowback" id="arrow">
         <h3 id="titleTPMC" class="titleTPMC">Tus Productos más comprados</h3>
         <img src="./image/carrito_header.svg" alt="carrito" class="cart">
       </div>   
@@ -26,30 +28,24 @@ export const tpmc = () =>{
         <option>Recomendados</option>
       </select>
     </div>
-    <div class="products" id="products"></div>
-    </main>  
-
+    <div class="products" id="products"></div> 
   </main>
   <footer class="navBar">
  <div class="navBarIcons">
-   <img src="./image/home.svg" alt="">
-   <img src="./image/pasillos.svg" alt="">
-   <img src="./image/list.svg" alt="">
-   <img src="./image/profile.svg" alt="">
+ <img src="./image/home.svg" alt="" id="home">
+ <img src="./image/pasillos.svg" alt="" id="aisles">
+ <img src="./image/list.svg" alt="" id="list">
+ <img src="./image/profile.svg" alt="" id="profile">
    </div>
  </footer>
   `
    
   divtpmc.innerHTML=viewtpmc;
   let table = divtpmc.querySelector('#products');
-  // window.addEventListener("load", printProducts());
-  // const printProducts= (dataProducts)=>{
-  //   dataProducts = data.results;
-  //   table.innerHTML="";
-    // let products="";
     let dataProducts= data.results
     for (let i = 0; i < dataProducts.length; i++) {
     let tarjeta = document.createElement("DIV");
+    let heart = document.createElement("IMG");
     let image = document.createElement("IMG");
     let name = document.createElement("P");
     let price = document.createElement("P");
@@ -58,15 +54,18 @@ export const tpmc = () =>{
     let addList = document.createElement("IMG");
     tarjeta.setAttribute("class", "cell");
     tarjeta.setAttribute("id", "card");
+    heart.setAttribute("src","./image/emptyHeart.svg");
+    heart.setAttribute("class", "heart");
+    heart.setAttribute("id", "heart");
     image.setAttribute("src", dataProducts[i].img);
     image.setAttribute("class", "image");
     name.setAttribute("class", "name");
     price.setAttribute("class", "price");
     amount.setAttribute("class", "amout");
-    addImg.setAttribute("src", );
+    addImg.setAttribute("src", "./image/addList.svg");
     addImg.setAttribute("class", "addImg");
     addImg.setAttribute("id", "addImg");
-    addImg.setAttribute("src", );
+    addList.setAttribute("src", "./image/addCart.svg");
     addList.setAttribute("class", "addList");
     addList.setAttribute("id", "addList");
     name.innerHTML = dataProducts[i].Titulo;
@@ -74,6 +73,7 @@ export const tpmc = () =>{
     amount.innerHTML = dataProducts[i].cantidad+dataProducts[i]["Unidad de Medida"];
     addList.innerHTML = "Agregar al carrito"
     table.appendChild(tarjeta);
+    tarjeta.appendChild(heart);
     tarjeta.appendChild(image);
     tarjeta.appendChild(name);
     tarjeta.appendChild(price);
@@ -87,7 +87,32 @@ export const tpmc = () =>{
   }
   
 
+  //boton volver
+let back = divtpmc.querySelector("#arrow");
+back.addEventListener("click", () => {
+  location.assign("#/");
+});
 
+//botones navBar
+let home = divtpmc.querySelector("#home");
+home.addEventListener("click", () => {
+  location.assign("#/");
+});loca
+
+let viewAisles = divtpmc.querySelector("#aisles");
+viewAisles.addEventListener("click", () => {
+  location.assign("#/pasillos");
+});
+
+let viewLists = divtpmc.querySelector("#list");
+viewLists.addEventListener("click", () => {
+  location.assign("#/tusListas");
+});
+
+let viewProfile = divtpmc.querySelector("#profile");
+viewProfile.addEventListener("click", () => {
+  location.assign("#/perfil");
+});
      return divtpmc; 
  }
        // <img src= "${dataProducts[i].img}">
