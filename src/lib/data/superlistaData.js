@@ -1,4 +1,5 @@
-export default[
+export default{
+  "results":[
   {
     Id: 50,
     'Código de Barras:': 7790513014924,
@@ -153,4 +154,5 @@ export default[
     Cantidad: 500,
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVHuEvaPBu4YNoCIkhwDgBFwyRjtgUWb21yXMgImF233Jeveqp3EtNbM1AAA&usqp=CAc',
   },
-];
+]
+};
