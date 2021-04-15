@@ -346,6 +346,7 @@
     .mainOfferProducts{
       display: flex;
       flex-direction: column;
+      height: 560px;
     }
     .offerSearch{
       position: relative;

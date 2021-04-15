@@ -32,28 +32,28 @@ export const despensa = () =>{
         <option>Recomendados</option>
       </select>
     </div>
-    <div class="products" id="products"></div> 
+    <div class="productsPantry" id="productsPantry"></div> 
   </main>
   <footer class="navBar">
- <div class="navBarIcons">
- <img src="./image/home.svg" alt="" id="home">
- <img src="./image/pasillos.svg" alt="" id="aisles">
- <img src="./image/list.svg" alt="" id="list">
- <img src="./image/profile.svg" alt="" id="profile">
-   </div>
+    <div class="navBarIcons">
+      <img src="./image/home.svg" alt="" id="home">
+      <img src="./image/pasillos.svg" alt="" id="aisles">
+      <img src="./image/list.svg" alt="" id="list">
+      <img src="./image/profile.svg" alt="" id="profile">
+    </div>
  </footer>
   `
    
   divpantry.innerHTML=viewpantry;
   //funcion que trae la data de productos
 
-  let tablepantry = divpantry.querySelector('#products');
-    let dataProducts= data.results
+  let tablepantry = divpantry.querySelector('#productsPantry');
+    let dataProductsPantry= data.results
 
-    window.addEventListener("load", allProducts(dataProducts));
-   function allProducts(dataProducts){
-    for (let i = 0; i < dataProducts.length; i++) {
-    let tarjeta = document.createElement("DIV");
+    window.addEventListener("load", allProducts(dataProductsPantry));
+   function allProducts(dataProductsPantry){
+    for (let i = 0; i < dataProductsPantry.length; i++) {
+    let tarjetapantry = document.createElement("DIV");
     let heart = document.createElement("IMG");
     let image = document.createElement("IMG");
     let name = document.createElement("P");

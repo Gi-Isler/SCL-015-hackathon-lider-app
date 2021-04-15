@@ -185,7 +185,7 @@ export default{
   {
     Id: 14,
     'Código de Barras:': 7613039184646,
-    Titulo: 'Nescafe instántaneo Black Roast',
+    Titulo: 'Nescafé instántaneo Black',
     'Palabra de búsqueda': 'Café',
     'Marca:': 'Nescafe',
     Seccion: 'Desayuno y colaciones',
@@ -213,7 +213,7 @@ export default{
   {
     Id: 16,
     'Código de Barras:': 7801875002037,
-    Titulo: 'Té Mystic Ceylan Supremo Finest Selection',
+    Titulo: 'Té Mystic Ceylan Finest Selection',
     'Palabra de búsqueda': 'Té',
     'Marca:': 'Supremo',
     Seccion: 'Desayuno y colaciones',
@@ -241,7 +241,7 @@ export default{
   {
     Id: 18,
     'Código de Barras:': 7809558101725,
-    Titulo: 'Edulcorante Liquido Stevia Daily',
+    Titulo: 'Edulcorante Liquido Stevia',
     'Palabra de búsqueda': 'Endulzante',
     'Marca:': 'Daily',
     Seccion: 'Desayuno y colaciones',
@@ -283,7 +283,7 @@ export default{
   {
     Id: 21,
     'Código de Barras:': 7802337801038,
-    Titulo: 'Sucedáneo de Jugo de Limón Traverso',
+    Titulo: 'Sucedáneo de Jugo de Limón',
     'Palabra de búsqueda': 'Jugo de Limón',
     'Marca:': 'Traverso',
     Seccion: 'Despensa',
@@ -325,7 +325,7 @@ export default{
   {
     Id: 24,
     'Código de Barras:': 7802500037059,
-    Titulo: 'Salsa de Tomates Lucchetti a la Italiana',
+    Titulo: 'Salsa de Tomates a la Italiana',
     'Palabra de búsqueda': 'Salsa',
     'Marca:': 'Lucchetti',
     Seccion: 'Despensa',
@@ -339,7 +339,7 @@ export default{
   {
     Id: 25,
     'Código de Barras:': 7805000314286,
-    Titulo: "Mayonesa Hellmann's Supreme Classic",
+    Titulo: "Mayonesa Supreme Classic",
     'Palabra de búsqueda': 'Mayonesa',
     'Marca:': 'Hellmanns',
     Seccion: 'Despensa',
@@ -353,7 +353,7 @@ export default{
   {
     Id: 26,
     'Código de Barras:': 7804608720161,
-    Titulo: 'Aceite de Oliva Extra Virgen Lider',
+    Titulo: 'Aceite de Oliva Extra Virgen',
     'Palabra de búsqueda': 'Aceite',
     'Marca:': 'Lider',
     Seccion: 'Despensa',
@@ -367,7 +367,7 @@ export default{
   {
     Id: 27,
     'Código de Barras:': 7802950006612,
-    Titulo: 'Sopa Maggi Sabor Pollo Fideos',
+    Titulo: 'Sopa Sabor Pollo Fideos',
     'Palabra de búsqueda': 'Sopa',
     'Marca:': 'Maggi',
     Seccion: 'Despensa',
@@ -381,7 +381,7 @@ export default{
   {
     Id: 28,
     'Código de Barras:': 7803700012020,
-    Titulo: 'Sopa Naturezza Posta con Cabellos',
+    Titulo: 'Sopa Posta con Cabellos',
     'Palabra de búsqueda': 'Sopa',
     'Marca:': 'Naturezza',
     Seccion: 'Despensa',
@@ -409,7 +409,7 @@ export default{
   {
     Id: 30,
     'Código de Barras:': 7802950006827,
-    Titulo: 'Puré de Papas Instantaneo Maggi',
+    Titulo: 'Puré de Papas Instantaneo',
     'Palabra de búsqueda': 'Pure',
     'Marca:': 'Maggi',
     Seccion: 'Despensa',
@@ -423,7 +423,7 @@ export default{
   {
     Id: 31,
     'Código de Barras:': 7804610850788,
-    Titulo: 'Lechuga Lollo Bionda Hidropónica',
+    Titulo: 'Lechuga Hidropónica',
     'Palabra de búsqueda': 'Lechuga',
     'Marca:': 'Pura Hoja',
     Seccion: 'Frutas y Verduras',
@@ -437,7 +437,7 @@ export default{
   {
     Id: 32,
     'Código de Barras:': 7803946001130,
-    Titulo: 'Cilantro',
+    Titulo: 'Cilantro en bolsa Agrosano',
     'Palabra de búsqueda': 'Cilantro',
     'Marca:': 'AgroSano',
     Seccion: 'Frutas y Verduras',
@@ -451,7 +451,7 @@ export default{
   {
     Id: 33,
     'Código de Barras:': 7802000614552,
-    Titulo: 'Plátano',
+    Titulo: 'Plátano Granel Lider',
     'Palabra de búsqueda': 'Plátanos',
     'Marca:': 'Platano a granel',
     Seccion: 'Frutas y Verduras',
@@ -465,7 +465,7 @@ export default{
   {
     Id: 34,
     'Código de Barras:': 7893000065253,
-    Titulo: 'Margarina Vegetal de mesa Qualy',
+    Titulo: 'Margarina Vegetal de mesa',
     'Palabra de búsqueda': 'Margarina',
     'Marca:': 'Qualy',
     Seccion: 'Lácteos y Huevos',
@@ -479,7 +479,7 @@ export default{
   {
     Id: 35,
     'Código de Barras:': 7802900230227,
-    Titulo: 'Yogurt Batido Soprole Yoghito Frutilla',
+    Titulo: 'Yogurt Batido Yoghito Frutilla',
     'Palabra de búsqueda': 'Yogurt',
     'Marca:': 'Soprole',
     Seccion: 'Lácteos y Huevos',
@@ -493,7 +493,7 @@ export default{
   {
     Id: 36,
     'Código de Barras:': 7802900230258,
-    Titulo: 'Yogurt Batido Soprole Yoghito Vainilla',
+    Titulo: 'Yogurt Batido Yoghito Vainilla',
     'Palabra de búsqueda': 'Yogurt',
     'Marca:': 'Soprole',
     Seccion: 'Lácteos y Huevos',
@@ -563,7 +563,7 @@ export default{
   {
     Id: 41,
     'Código de Barras:': 7790513014924,
-    Titulo: 'Lysoform Limpiador Liquido Desinfectante',
+    Titulo: 'Limpiador Liquido Desinfectante',
     'Palabra de búsqueda': 'Limpiador Multiuso',
     'Marca:': 'Lysoform',
     Seccion: 'Limpieza',
@@ -577,7 +577,7 @@ export default{
   {
     Id: 42,
     'Código de Barras:': 7790520014184,
-    Titulo: 'Lysoform Desinfectante de Ambientes Fragancia Lavanda',
+    Titulo: 'Desinfectante Fragancia Lavanda',
     'Palabra de búsqueda': 'Aerosol',
     'Marca:': 'Lysoform',
     Seccion: 'Limpieza',
@@ -591,7 +591,7 @@ export default{
   {
     Id: 43,
     'Código de Barras:': 7805040000781,
-    Titulo: 'Limpiador Clorogel Igenix Eucaliptus',
+    Titulo: 'Limpiador Gel Eucaliptus',
     'Palabra de búsqueda': 'Clorogel',
     'Marca:': 'Igenix',
     Seccion: 'Limpieza',
@@ -605,7 +605,7 @@ export default{
   {
     Id: 44,
     'Código de Barras:': 7805040001825,
-    Titulo: 'Limpiador Clorogel Igenix Lavanda',
+    Titulo: 'Limpiador Clorogel Lavanda',
     'Palabra de búsqueda': 'Clorogel',
     'Marca:': 'Igenix',
     Seccion: 'Limpieza',
@@ -619,7 +619,7 @@ export default{
   {
     Id: 45,
     'Código de Barras:': 7804100002468,
-    Titulo: 'Alimento Gato Champion Cat Trocitos en Salsa  sabor Pollo y pavo',
+    Titulo: 'Alimento Gato Champion Cat',
     'Palabra de búsqueda': 'Alimento',
     'Marca:': 'Champion Cat',
     Seccion: 'Mascotas',
@@ -633,7 +633,7 @@ export default{
   {
     Id: 46,
     'Código de Barras:': '041333000985',
-    Titulo: 'Pilas Duracell 1.5volt Tamaño D pack 2',
+    Titulo: 'Pilas Duracell 1.5volt Tamaño D',
     'Palabra de búsqueda': 'Pilas',
     'Marca:': 'Duracell',
     Seccion: 'Normal',
@@ -675,7 +675,7 @@ export default{
   {
     Id: 49,
     'Código de Barras:': 780193009049,
-    Titulo: 'Salame Ahumado',
+    Titulo: 'Salame Ahumado Granel',
     'Palabra de búsqueda': 'Salame',
     'Marca:': 'PF',
     Seccion: 'Quesos y Fiambres',
