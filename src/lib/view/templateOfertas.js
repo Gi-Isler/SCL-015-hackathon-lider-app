@@ -1,15 +1,15 @@
 import data from "../data/carolinaData.js"
-import {orderLowerPrice,orderDefault,productsFilter} from "../index.js"
-export const tpmc = () =>{
-  const divtpmc = document.createElement("div");
-  divtpmc.setAttribute('CLASS','tpmc');
+import {orderLowerPrice,orderDefault,productsFilter,searchProducts} from "../index.js"
+export const ofertas = () =>{
+  const divOffers = document.createElement("div");
+  divOffers.setAttribute('CLASS','tpmc');
 
-  const viewtpmc = `
+  const viewOffers = `
   <header class="headerTPMC">
     <div class="contentTPMC">
       <div class="contentTPMC">
         <img src="./image/backArrow.svg" alt="Retroceder" class="arrowback" id="backArrow">
-        <h3 id="titleTPMC" class="titleTPMC">Tus Productos más comprados</h3>
+        <h3 id="titleTPMC" class="titleTPMC">OFERTAS</h3>
         <img src="./image/carrito_header.svg" alt="carrito" class="cartTPMC">
       </div>   
       <div class="categories">
@@ -20,8 +20,11 @@ export const tpmc = () =>{
       </div>  
     </div>
   </header>
-  <main class="mainProducts">
-    <div class="order">
+  <main class="mainOfferProducts">
+  <div class="offerSearch">
+  <input type="search" placeholder="¿Qué productos buscas hoy?" class="search" id="search"><img src="./image/search.svg" alt="buscar" class="searchImg">
+  </div>
+    <div class="offersOrder">
       <select type="option"name="Ordenar por" id="sortBy">
         <option value="default">Ordenar por</option>
         <option value="lowerPrice">Menor precio</option>
@@ -41,10 +44,10 @@ export const tpmc = () =>{
  </footer>
   `
    
-  divtpmc.innerHTML=viewtpmc;
+  divOffers.innerHTML=viewOffers;
   //funcion que trae la data de productos
 
-  let table = divtpmc.querySelector('#products');
+  let table = divOffers.querySelector('#products');
     let dataProducts= data.results
 
     window.addEventListener("load", allProducts(dataProducts));
@@ -94,7 +97,7 @@ export const tpmc = () =>{
 }
 
 //función de ordenar
-let select = divtpmc.querySelector("#sortBy");
+let select = divOffers.querySelector("#sortBy");
 select.addEventListener("change", function () {
 
   if (select.value === "lowerPrice") {
@@ -114,7 +117,7 @@ select.addEventListener("change", function () {
 
 
 //función filtrar
-let all = divtpmc.querySelector('#all');
+let all = divOffers.querySelector('#all');
  all.addEventListener('click',allBtn)
 
  function allBtn(){
@@ -123,7 +126,7 @@ let all = divtpmc.querySelector('#all');
   allProducts(dataProducts);
 }
 
-let meat = divtpmc.querySelector('#meat');
+let meat = divOffers.querySelector('#meat');
  meat.addEventListener('click',meatBtn)
 
  function meatBtn(){
@@ -135,7 +138,7 @@ let meat = divtpmc.querySelector('#meat');
   allProducts(dataProducts);
 }
 
-let milkandeggs = divtpmc.querySelector('#milkandeggs');
+let milkandeggs = divOffers.querySelector('#milkandeggs');
 milkandeggs.addEventListener('click',milkBtn)
 
  function milkBtn(){
@@ -147,7 +150,7 @@ milkandeggs.addEventListener('click',milkBtn)
   allProducts(dataProducts);
 }
 
-let drinks = divtpmc.querySelector('#drinks');
+let drinks = divOffers.querySelector('#drinks');
 drinks.addEventListener('click',drinksBtn)
 
  function drinksBtn(){
@@ -159,35 +162,43 @@ drinks.addEventListener('click',drinksBtn)
   allProducts(dataProducts);
 }
 
-
+//buscar
+let searchBar = divOffers.querySelector('#search')
+function search() {
+    let text = searchBar.value;
+    console.log(text)
+    let searchProduct = searchProducts(dataProducts, text);
+    dataProducts = searchProduct;
+    allProducts(dataProducts);
+  }
+  searchBar.addEventListener("keyup", search);
   
 
   //boton volver
-let back = divtpmc.querySelector("#backArrow");
+let back = divOffers.querySelector("#backArrow");
 back.addEventListener("click", () => {
   location.assign("#/");
 });
 
 //botones navBar
-let home = divtpmc.querySelector("#home");
+let home = divOffers.querySelector("#home");
 home.addEventListener("click", () => {
   location.assign("#/");
 });
 
-let viewAisles = divtpmc.querySelector("#aisles");
+let viewAisles = divOffers.querySelector("#aisles");
 viewAisles.addEventListener("click", () => {
   location.assign("#/pasillos");
 });
 
-let viewLists = divtpmc.querySelector("#list");
+let viewLists = divOffers.querySelector("#list");
 viewLists.addEventListener("click", () => {
   location.assign("#/tusListas");
 });
 
-let viewProfile = divtpmc.querySelector("#profile");
+let viewProfile = divOffers.querySelector("#profile");
 viewProfile.addEventListener("click", () => {
   location.assign("#/perfil");
 });
-     return divtpmc; 
+     return divOffers; 
  }
-    

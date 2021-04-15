@@ -1,27 +1,30 @@
 import data from "../data/carolinaData.js"
 import {orderLowerPrice,orderDefault,productsFilter} from "../index.js"
-export const tpmc = () =>{
-  const divtpmc = document.createElement("div");
-  divtpmc.setAttribute('CLASS','tpmc');
 
-  const viewtpmc = `
-  <header class="headerTPMC">
-    <div class="contentTPMC">
-      <div class="contentTPMC">
+export const despensa = () =>{
+  const divpantry = document.createElement("div");
+  divpantry.setAttribute('CLASS','pantry');
+
+  const viewpantry = `
+  <header class="headerPantry">
+    <div class="contentPantry">
+      <div class="contentPantry">
         <img src="./image/backArrow.svg" alt="Retroceder" class="arrowback" id="backArrow">
-        <h3 id="titleTPMC" class="titleTPMC">Tus Productos más comprados</h3>
-        <img src="./image/carrito_header.svg" alt="carrito" class="cartTPMC">
+        <h3 id="titlePantry" class="titlePantry">Despensa</h3>
+        <img src="./image/carrito_header.svg" alt="carrito" class="cartPantry">
       </div>   
       <div class="categories">
-      <button id="all" class="all">Todos</button>
-      <button id="meat" class="meat">Carne, pollo y mariscos</button>
-      <button id="milkandeggs" class="milkandeggs">Lácteos y Huevos</button>
-      <button id="drinks" class="drinks">Bebidas, aguas y jugos</button>
+      <button id="allPantry" class="allPantry">Todos</button>
+      <button id="meatPantry" class="meatPantry">Carne, pollo y mariscos</button>
+      <button id="milkandeggsPantry" class="milkandeggsPantry">Lácteos y Huevos</button>
+      <button id="drinksPantry" class="drinksPantry">Bebidas, aguas y jugos</button>
       </div>  
     </div>
   </header>
-  <main class="mainProducts">
-    <div class="order">
+  <main class="mainProductsPantry">
+  <div class="pantryearch"></div>
+  <input type="search" placeholder="¿Qué productos buscas hoy?" class="search"><img src="./image/search.svg" alt="buscar" class="searchImg">
+    <div class="pantryOrder">
       <select type="option"name="Ordenar por" id="sortBy">
         <option value="default">Ordenar por</option>
         <option value="lowerPrice">Menor precio</option>
@@ -41,10 +44,10 @@ export const tpmc = () =>{
  </footer>
   `
    
-  divtpmc.innerHTML=viewtpmc;
+  divpantry.innerHTML=viewpantry;
   //funcion que trae la data de productos
 
-  let table = divtpmc.querySelector('#products');
+  let tablepantry = divpantry.querySelector('#products');
     let dataProducts= data.results
 
     window.addEventListener("load", allProducts(dataProducts));
@@ -94,7 +97,7 @@ export const tpmc = () =>{
 }
 
 //función de ordenar
-let select = divtpmc.querySelector("#sortBy");
+let select = divpantry.querySelector("#sortBy");
 select.addEventListener("change", function () {
 
   if (select.value === "lowerPrice") {
@@ -114,7 +117,7 @@ select.addEventListener("change", function () {
 
 
 //función filtrar
-let all = divtpmc.querySelector('#all');
+let all = divpantry.querySelector('#all');
  all.addEventListener('click',allBtn)
 
  function allBtn(){
@@ -123,7 +126,7 @@ let all = divtpmc.querySelector('#all');
   allProducts(dataProducts);
 }
 
-let meat = divtpmc.querySelector('#meat');
+let meat = divpantry.querySelector('#meat');
  meat.addEventListener('click',meatBtn)
 
  function meatBtn(){
@@ -135,7 +138,7 @@ let meat = divtpmc.querySelector('#meat');
   allProducts(dataProducts);
 }
 
-let milkandeggs = divtpmc.querySelector('#milkandeggs');
+let milkandeggs = divpantry.querySelector('#milkandeggs');
 milkandeggs.addEventListener('click',milkBtn)
 
  function milkBtn(){
@@ -147,7 +150,7 @@ milkandeggs.addEventListener('click',milkBtn)
   allProducts(dataProducts);
 }
 
-let drinks = divtpmc.querySelector('#drinks');
+let drinks = divpantry.querySelector('#drinks');
 drinks.addEventListener('click',drinksBtn)
 
  function drinksBtn(){
@@ -163,31 +166,30 @@ drinks.addEventListener('click',drinksBtn)
   
 
   //boton volver
-let back = divtpmc.querySelector("#backArrow");
+let back = divpantry.querySelector("#backArrow");
 back.addEventListener("click", () => {
   location.assign("#/");
 });
 
 //botones navBar
-let home = divtpmc.querySelector("#home");
+let home = divpantry.querySelector("#home");
 home.addEventListener("click", () => {
   location.assign("#/");
 });
 
-let viewAisles = divtpmc.querySelector("#aisles");
+let viewAisles = divpantry.querySelector("#aisles");
 viewAisles.addEventListener("click", () => {
   location.assign("#/pasillos");
 });
 
-let viewLists = divtpmc.querySelector("#list");
+let viewLists = divpantry.querySelector("#list");
 viewLists.addEventListener("click", () => {
   location.assign("#/tusListas");
 });
 
-let viewProfile = divtpmc.querySelector("#profile");
+let viewProfile = divpantry.querySelector("#profile");
 viewProfile.addEventListener("click", () => {
   location.assign("#/perfil");
 });
-     return divtpmc; 
+     return divpantry; 
  }
-    

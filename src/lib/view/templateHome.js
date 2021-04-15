@@ -1,5 +1,4 @@
-
-
+import data from "../data/carolinaData.js"
 export const home = () => {
   const divHome = document.createElement('div');
   divHome.setAttribute('CLASS','home');
@@ -22,7 +21,7 @@ export const home = () => {
       <img src="./image/cheque ahorro.png" alt="puntos MiClub" class="savingCheck">
       <img src="./image/mislistas1.png" alt="listas" class="lists">
       <h2 class="tPMCTitle">Tus productos Más Comprados</h2><h4 class="moreTitle" id="forwardTPMC">Ver más</h4>
-      <div>
+      <div id="table" class= "contTPMCHome">
         <!-- Contenido dinamico -->
       </div>
   </main>
@@ -38,7 +37,64 @@ export const home = () => {
 `;
 
   divHome.innerHTML = viewHome;
+let dataProducts = data.results
+let homeProducts=[];
+homeProducts = dataProducts.splice(4,3);
+console.log(homeProducts);
 
+let table = divHome.querySelector('#table')
+
+window.addEventListener("load", allProducts(homeProducts));
+function allProducts(homeProducts){
+ for (let i = 0; i < homeProducts.length; i++) {
+ let tarjeta = document.createElement("DIV");
+ let heart = document.createElement("IMG");
+ let image = document.createElement("IMG");
+ let name = document.createElement("P");
+ let price = document.createElement("P");
+ let amount = document.createElement("P");
+ let addImg = document.createElement("IMG");
+ let addList = document.createElement("IMG");
+ tarjeta.setAttribute("class", "cell");
+ tarjeta.setAttribute("id", "card");
+ image.setAttribute("src", homeProducts[i].img);
+ image.setAttribute("class", "image");
+ heart.setAttribute("src","./image/emptyHeart.svg");
+ heart.setAttribute("class", "heart");
+ heart.setAttribute("id", "heart");
+ name.setAttribute("class", "name");
+ price.setAttribute("class", "price");
+ amount.setAttribute("class", "amount");
+ addImg.setAttribute("src", "./image/addList.svg");
+ addImg.setAttribute("class", "addImg");
+ addImg.setAttribute("id", "addImg");
+ addList.setAttribute("src", "./image/addCart.svg");
+ addList.setAttribute("class", "addList");
+ addList.setAttribute("id", "addList");
+ name.innerHTML = homeProducts[i].Titulo;
+ price.innerHTML = '$ ' +homeProducts[i].Precio;
+ amount.innerHTML = homeProducts[i].cantidad+homeProducts[i]["Unidad de Medida"];
+ addList.innerHTML = "Agregar al carrito"
+ table.appendChild(tarjeta);
+ tarjeta.appendChild(heart);
+ tarjeta.appendChild(image);
+ tarjeta.appendChild(name);
+ tarjeta.appendChild(price);
+ tarjeta.appendChild(amount);
+ tarjeta.appendChild(addImg);
+ tarjeta.appendChild(addList);
+ //aqui le decimos a la tarjeta que cuando oiga click ejecute la funcion que muestra el modal
+ tarjeta.onclick = function () {
+   addModal(info[i]);
+ }
+}
+}
+
+
+
+
+
+//ir a tus productos mas comprados
 let goTPMC = divHome.querySelector('#forwardTPMC');
 goTPMC.addEventListener("click",() => {
   location.assign("#/tpmc");

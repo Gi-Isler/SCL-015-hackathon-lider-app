@@ -3,6 +3,7 @@
     margin: 0px;
   }
 
+
   body{
     background-color: #fafafa;
 }
@@ -140,7 +141,14 @@
       position: absolute;
       margin: -22px 0 0 84%;
     }
-  
+    .contTPMCHome{
+      display: flex;
+      justify-content: space-evenly;
+      overflow: scroll;
+      height: 34vh;
+      margin-top: 2vh;
+    }
+
     /* Template Tus Listas */
     .myList{
       width: 100vw;
@@ -243,7 +251,6 @@
     }
 
     .products{
-      height: 100%;
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
@@ -251,13 +258,98 @@
     }
 
     .image{
-      width: 100px;
-      height: 103px;
+      width: 75px;
+      height: 73px;
     }
 
     .cell{
-    height: 113px;
-    width: 34%;
+      width: 105px;
+      height: 225px;;
+      background: #FFFFFF;
+      border-radius: 8px;
+      margin-bottom: 18px;
+    }
+
+    .name{
+      font-family: Bogle;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 120%;
+      color: #000;
+      margin-left: 5px;
+      margin-top: 2px;
+    }
+
+    .price{
+    font-family: Bogle;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    margin-left: 5px;
+    margin-top: 2px;
+    }
+
+    .amount{
+      font-family: Bogle;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 11px;
+      line-height: 15px;
+      color: #747474;
+      margin-left: 5px;
+      margin-top: 2px;
+    }
+
+    .addImg{
+      padding: 2px;
+      margin-left: 3px;
+    }
+
+    .addList{
+      padding: 2px;
+      margin: 11px 0 0 4px;
+    }
+
+    /* Template Pasillos */
+      .contenAisles{
+      display: flex;
+      justify-content: space-evenly;
+      margin-left: -39vw;
+      margin-bottom:35px;
+    }
+    
+    .mainContentAisles{
+      overflow: scroll;
+      height: 82vh;
+      margin-top: -3vh;
+    }
+
+    .titleAisles{
+      font-family: Bogle_black;
+      margin-top: 3.5vh;
+      margin-left: -40vw;
+    }
+
+    .aisleDeals, .drinksAisle, .fruitAisle, .hallwayCleaning, .bakeryAisle {
+      margin-left: 10px;
+    }
+    
+
+
+
+
+
+    /* template ofertas */
+    .mainOfferProducts{
+      display: flex;
+      flex-direction: column;
+    }
+    .offerSearch{
+      position: relative;
+      top:6vh;
     }
 
 
@@ -265,6 +357,5 @@
 
 
 
-      
 
   }

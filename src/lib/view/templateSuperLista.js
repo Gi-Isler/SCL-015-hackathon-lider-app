@@ -1,32 +1,34 @@
 import data from "../data/superlistaData.js"
-export const superLista = () =>{
-  const divsuperLista = document.createElement("div");
-  const viewsuperLista = `
+export const superLists = () =>{
+  const divsuperLists = document.createElement("div");
+  const viewsuperLists = `
   <header class="headerSuperLists">
-    <div class="contentSuperLists">
-      <div class="contenSuperLists">
-        <img src="./image/backArrow.svg" alt="Retroceder" id="arrowbackSL" class="arrowback">
-        <h3 id="titleSL" class="titleSL">Super Lista</h3>
-        <img src="./image/carrito_header.svg" alt="carrito" class="cart">
-      </div>
-    </div>   
+    <div class="contenSuperLists">
+      <img src="./image/backArrow.svg" alt="Retroceder" id="arrowbackSL" class="arrowback">
+      <h3 id="titleSL" class="titleSL">Super Lista</h3>
+      
+      <img src="./image/carrito_header.svg" alt="carrito" class="cart">
+    </div>
   </header>
   <main class="mainSuperLists">
+     <h4 id="titleSLAisle" class
+"titleSLAisle">Limpieza</h4>
+     <h5 id="titleSLAisleProducts" class="titleSLAisleProducts">Productos</h5>
     <div class="productsSL" id="productsSL"></div> 
   </main>
   <footer class="navBar">
-  <div class="navBarIcons">
-  <img src="./image/home.svg" alt="" id="homeSL">
-  <img src="./image/pasillos.svg" alt="" id="aislesSL">
-  <img src="./image/list.svg" alt="" id="listSL">
-  <img src="./image/profile.svg" alt="" id="profileSL">
-  </div>
+    <div class="navBarIcons">
+      <img src="./image/home.svg" alt="" id="homeSL">
+      <img src="./image/pasillos.svg" alt="" id="aislesSL">
+      <img src="./image/list.svg" alt="" id="listSL">
+      <img src="./image/profile.svg" alt="" id="profileSL">
+    </div>
   </footer>
 
       `; 
 
-      divsuperLista.innerHTML=viewsuperLista;
-      let tableSL = divsuperLista.querySelector('#productsSL');
+      divsuperLists.innerHTML=viewsuperLists;
+      let tableSL = divsuperLists.querySelector('#productsSL');
       let dataSuperList= data.results
       for (let i = 0; i < dataSuperList.length; i++) {
       let tarjetaSL = document.createElement("DIV");
@@ -72,33 +74,33 @@ export const superLista = () =>{
 
 
       //boton volver
-let back = divsuperLista.querySelector("#arrowbackSL");
-back.addEventListener("click", () => {
+let backSL = divsuperLists.querySelector("#arrowbackSL");
+backSL.addEventListener("click", () => {
   location.assign("#/tusListas");
 });
 
 //botones navBar
-let home = divsuperLista.querySelector("#homeSL");
-home.addEventListener("click", () => {
+let homeSL = divsuperLists.querySelector("#homeSL");
+homeSL.addEventListener("click", () => {
   location.assign("#/");
 });
 
-let viewAisles = divsuperLista.querySelector("#aislesSL");
-viewAisles.addEventListener("click", () => {
+let viewAislesSL = divsuperLists.querySelector("#aislesSL");
+viewAislesSL.addEventListener("click", () => {
   location.assign("#/pasillos");
 });
 
-let viewLists = divsuperLista.querySelector("#listSL");
-viewLists.addEventListener("click", () => {
+let viewListsSL = divsuperLists.querySelector("#listSL");
+viewListsSL.addEventListener("click", () => {
   location.assign("#/tusListas");
 });
 
-let viewProfile = divsuperLista.querySelector("#profileSL");
-viewProfile.addEventListener("click", () => {
+let viewProfileSL = divsuperLists.querySelector("#profileSL");
+viewProfileSL.addEventListener("click", () => {
   location.assign("#/perfil");
 });
 
-return divsuperLista; 
+return divsuperLists; 
 
 
 }
