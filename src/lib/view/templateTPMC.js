@@ -13,10 +13,10 @@ export const tpmc = () =>{
         <img src="./image/carrito_header.svg" alt="carrito" class="cartTPMC">
       </div>   
       <div class="categories">
-      <button id="all" class="all">Todos</button>
-      <button id="meat" class="meat">Carne, pollo y mariscos</button>
-      <button id="milkandeggs" class="milkandeggs">Lácteos y Huevos</button>
-      <button id="drinks" class="drinks">Bebidas, aguas y jugos</button>
+        <img src="./image/all.svg" alt="Todos" class="all" id="all" type="button">
+        <img src="./image/meat.svg" alt="Carne, pollo y mariscos" class="meat" id="meat" type="button">
+        <img src="./image/milk.svg" alt="Lácteos y Huevos" class="milkandeggs" id="milkandeggs" type="button">
+        <img src="./image/drinks.svg" alt="Bebidas, aguas y jugos" class="drinks" id="drinks" type="button">
       </div>  
     </div>
   </header>
@@ -63,7 +63,7 @@ export const tpmc = () =>{
     image.setAttribute("src", dataProducts[i].img);
     image.setAttribute("class", "image");
     heart.setAttribute("src","./image/emptyHeart.svg");
-    heart.setAttribute("class", "heart");
+    heart.setAttribute("class", "heartTPMC");
     heart.setAttribute("id", "heart");
     name.setAttribute("class", "name");
     price.setAttribute("class", "price");

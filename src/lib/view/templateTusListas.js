@@ -36,12 +36,12 @@ let back = divMisListas.querySelector("#arrow");
  //botones banners
  let lastBuys = divMisListas.querySelector("#lastBuys");
  lastBuys.addEventListener("click", () => {
-   location.assign("#/misComprasAnteriores");
+   location.assign("#/comprasAnteriores");
  });
 
  let myLists = divMisListas.querySelector("#myLists");
  myLists.addEventListener("click", () => {
-   location.assign("#/Listas");
+   location.assign("#/listas");
  });
 
  let superLists = divMisListas.querySelector("#superLists");

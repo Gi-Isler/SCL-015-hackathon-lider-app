@@ -1,5 +1,6 @@
 export const aisles = () =>{
   const divpasillos = document.createElement("div");
+  divpasillos.setAttribute('CLASS','mainAisles');
   const viewpasillos = `
   <header class="headerAisles">
     <div class="contenAisles">

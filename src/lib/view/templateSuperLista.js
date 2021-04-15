@@ -5,7 +5,7 @@ export const superLists = () =>{
   <header class="headerSuperLists">
     <div class="contenSuperLists">
       <img src="./image/backArrow.svg" alt="Retroceder" id="arrowbackSL" class="arrowback">
-      <h3 id="titleSL" class="titleSL">Super Lista</h3>
+      <h3 id="titleSL" class="titleSL">Super Listas</h3>
       
       <img src="./image/carrito_header.svg" alt="carrito" class="cart">
     </div>
@@ -38,21 +38,21 @@ export const superLists = () =>{
       let priceSL = document.createElement("P");
       let amountSL = document.createElement("P");
       let addCartSL = document.createElement("IMG");
-      tarjetaSL.setAttribute("class", "cellSL");
+      tarjetaSL.setAttribute("class", "cell");
       tarjetaSL.setAttribute("id", "cardSL");
       heartSL.setAttribute("src","./image/emptyHeart.svg");
       heartSL.setAttribute("class", "heartSL");
       imageSL.setAttribute("src", dataSuperList[i].img);
-      imageSL.setAttribute("class", "imageSL");
-      nameSL.setAttribute("class", "nameSL");
-      priceSL.setAttribute("class", "priceSL");
-      amountSL.setAttribute("class", "amoutSL");
+      imageSL.setAttribute("class", "image");
+      nameSL.setAttribute("class", "name");
+      priceSL.setAttribute("class", "price");
+      amountSL.setAttribute("class", "amount");
       addCartSL.setAttribute("src", "./image/addCart.svg");
-      addCartSL.setAttribute("class", "addCartSL");
+      addCartSL.setAttribute("class", "addImg");
       addCartSL.setAttribute("id", "addCartSL");
       nameSL.innerHTML =dataSuperList[i].Titulo;
-      priceSL.innerHTML =dataSuperList[i].Precio;
-      amountSL.innerHTML =dataSuperList[i].cantidad+dataSuperList[i]["Unidad de Medida"];
+      priceSL.innerHTML = '$ ' +dataSuperList[i].Precio;
+      amountSL.innerHTML =dataSuperList[i].Cantidad+dataSuperList[i]["Unidad de Medida"];
       tableSL.appendChild(tarjetaSL);
       tarjetaSL.appendChild(heartSL);
       tarjetaSL.appendChild(imageSL);

@@ -4,7 +4,6 @@ import {orderLowerPrice,orderDefault,productsFilter} from "../index.js"
 export const despensa = () =>{
   const divpantry = document.createElement("div");
   divpantry.setAttribute('CLASS','pantry');
-
   const viewpantry = `
   <header class="headerPantry">
     <div class="contentPantry">
@@ -54,43 +53,43 @@ export const despensa = () =>{
    function allProducts(dataProductsPantry){
     for (let i = 0; i < dataProductsPantry.length; i++) {
     let tarjetapantry = document.createElement("DIV");
-    let heart = document.createElement("IMG");
-    let image = document.createElement("IMG");
-    let name = document.createElement("P");
-    let price = document.createElement("P");
-    let amount = document.createElement("P");
-    let addImg = document.createElement("IMG");
-    let addList = document.createElement("IMG");
-    tarjeta.setAttribute("class", "cell");
-    tarjeta.setAttribute("id", "card");
-    image.setAttribute("src", dataProducts[i].img);
-    image.setAttribute("class", "image");
-    heart.setAttribute("src","./image/emptyHeart.svg");
-    heart.setAttribute("class", "heart");
-    heart.setAttribute("id", "heart");
-    name.setAttribute("class", "name");
-    price.setAttribute("class", "price");
-    amount.setAttribute("class", "amount");
-    addImg.setAttribute("src", "./image/addList.svg");
-    addImg.setAttribute("class", "addImg");
-    addImg.setAttribute("id", "addImg");
-    addList.setAttribute("src", "./image/addCart.svg");
-    addList.setAttribute("class", "addList");
-    addList.setAttribute("id", "addList");
-    name.innerHTML = dataProducts[i].Titulo;
-    price.innerHTML = '$ ' +dataProducts[i].Precio;
-    amount.innerHTML = dataProducts[i].cantidad+dataProducts[i]["Unidad de Medida"];
-    addList.innerHTML = "Agregar al carrito"
-    table.appendChild(tarjeta);
-    tarjeta.appendChild(heart);
-    tarjeta.appendChild(image);
-    tarjeta.appendChild(name);
-    tarjeta.appendChild(price);
-    tarjeta.appendChild(amount);
-    tarjeta.appendChild(addImg);
-    tarjeta.appendChild(addList);
+    let heartPantry = document.createElement("IMG");
+    let imagePantry = document.createElement("IMG");
+    let namePantry = document.createElement("P");
+    let pricePantry = document.createElement("P");
+    let amountPantry = document.createElement("P");
+    let addImgPantry = document.createElement("IMG");
+    let addListPantry = document.createElement("IMG");
+    tarjetaPantry.setAttribute("class", "cellPantry");
+    tarjetaPantry.setAttribute("id", "cardPantry");
+    imagePantry.setAttribute("src", dataProducts[i].img);
+    imagePantry.setAttribute("class", "imagePantry");
+    heartPantry.setAttribute("src","./image/emptyHeart.svg");
+    heartPantry.setAttribute("class", "heartPantry");
+    heartPantry.setAttribute("id", "heartPantry");
+    namePantry.setAttribute("class", "namePantry");
+    pricePantry.setAttribute("class", "pricePantry");
+    amountPantry.setAttribute("class", "amountPantry");
+    addImgPantry.setAttribute("src", "./image/addList.svg");
+    addImgPantry.setAttribute("class", "addImgPantry");
+    addImgPantry.setAttribute("id", "addImgPantry");
+    addListPantry.setAttribute("src", "./image/addCart.svg");
+    addListPantry.setAttribute("class", "addListPantry");
+    addListPantry.setAttribute("id", "addListPantry");
+    namePantry.innerHTML = dataProducts[i].Titulo;
+    pricePantry.innerHTML = '$ ' +dataProducts[i].Precio;
+    amountPantry.innerHTML = dataProducts[i].cantidad+dataProducts[i]["Unidad de Medida"];
+    addListPantry.innerHTML = "Agregar al carrito"
+    tablePantry.appendChild(tarjetaPantry);
+    tarjetaPantry.appendChild(heartPantry);
+    tarjetaPantry.appendChild(imagePantry);
+    tarjetaPantry.appendChild(namePantry);
+    tarjetaPantry.appendChild(pricePantry);
+    tarjetaPantry.appendChild(amountPantry);
+    tarjetaPantry.appendChild(addImgPantry);
+    tarjetaPantry.appendChild(addListPantry);
     //aqui le decimos a la tarjeta que cuando oiga click ejecute la funcion que muestra el modal
-    tarjeta.onclick = function () {
+    tarjetaPantry.onclick = function () {
       addModal(info[i]);
     }
   }
