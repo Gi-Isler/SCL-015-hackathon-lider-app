@@ -44,7 +44,7 @@
     }
 
     .navBar{
-      position: fixed;
+      position: sticky;
       border-radius:8px 8px 0 0;
       background-color:#0D346B;
       width: 100vw;
@@ -191,25 +191,23 @@
       margin-top: 2vh;
       font-family:Bogle_black;
     }
-    /* .contentTPMC{
+    .contentTPMC{
       display: flex;
       justify-content: space-evenly;
-      margin-left: -40vw;
+      margin-left: 3vw;
     }
 
-    .arrow{
+    .arrowback{
     margin-right: 3vw;
     }
     
     .titleTPMC{
-      margin-top: 1.5vh;
-      margin-left: -40vw;
+      
     }
 
-    .cart{
-     margin-right:-39vw;
-    } */
-
-
-
+    .products{
+      overflow: scroll;
+      height: 71vh;
+      margin-top: 3vh;
+    }
   }

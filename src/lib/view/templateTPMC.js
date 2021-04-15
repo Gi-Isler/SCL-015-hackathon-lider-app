@@ -5,7 +5,7 @@ export const tpmc = () =>{
   <header class="headerTPMC">
     <div class="contentTPMC">
       <div class="contentTPMC">
-        <img src="./image/backArrow.svg" alt="Retroceder" class="arrow">
+        <img src="./image/backArrow.svg" alt="Retroceder" class="arrowback">
         <h3 id="titleTPMC" class="titleTPMC">Tus Productos más comprados</h3>
         <img src="./image/carrito_header.svg" alt="carrito" class="cart">
       </div>   
@@ -54,6 +54,8 @@ export const tpmc = () =>{
     let name = document.createElement("P");
     let price = document.createElement("P");
     let amount = document.createElement("P");
+    let addImg = document.createElement("IMG");
+    let addList = document.createElement("IMG");
     tarjeta.setAttribute("class", "cell");
     tarjeta.setAttribute("id", "card");
     image.setAttribute("src", dataProducts[i].img);
@@ -61,14 +63,23 @@ export const tpmc = () =>{
     name.setAttribute("class", "name");
     price.setAttribute("class", "price");
     amount.setAttribute("class", "amout");
+    addImg.setAttribute("src", );
+    addImg.setAttribute("class", "addImg");
+    addImg.setAttribute("id", "addImg");
+    addImg.setAttribute("src", );
+    addList.setAttribute("class", "addList");
+    addList.setAttribute("id", "addList");
     name.innerHTML = dataProducts[i].Titulo;
     price.innerHTML = dataProducts[i].Precio;
     amount.innerHTML = dataProducts[i].cantidad+dataProducts[i]["Unidad de Medida"];
+    addList.innerHTML = "Agregar al carrito"
     table.appendChild(tarjeta);
     tarjeta.appendChild(image);
     tarjeta.appendChild(name);
     tarjeta.appendChild(price);
     tarjeta.appendChild(amount);
+    tarjeta.appendChild(addImg);
+    tarjeta.appendChild(addList);
     //aqui le decimos a la tarjeta que cuando oiga click ejecute la funcion que muestra el modal
     tarjeta.onclick = function () {
       addModal(info[i]);
