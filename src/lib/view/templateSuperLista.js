@@ -2,31 +2,31 @@ import data from "../data/superlistaData.js"
 export const superLista = () =>{
   const divsuperLista = document.createElement("div");
   const viewsuperLista = `
-  <header class="headerSuperLista">
-    <div class="contentSuperLista">
-      <div class="contenSuperLista">
-        <img src="./image/backArrow.svg" alt="Retroceder" class="arrowback">
-        <h3 id="titleTPMC" class="titleTPMC">Super Lista</h3>
+  <header class="headerSuperLists">
+    <div class="contentSuperLists">
+      <div class="contenSuperLists">
+        <img src="./image/backArrow.svg" alt="Retroceder" id="arrowbackSL" class="arrowback">
+        <h3 id="titleSL" class="titleSL">Super Lista</h3>
         <img src="./image/carrito_header.svg" alt="carrito" class="cart">
       </div>
     </div>   
   </header>
-  <main class="mainProducts">
-    <div class="products" id="products"></div> 
+  <main class="mainSuperLists">
+    <div class="productsSL" id="productsSL"></div> 
   </main>
   <footer class="navBar">
   <div class="navBarIcons">
-  <img src="./image/home.svg" alt="" id="home">
-  <img src="./image/pasillos.svg" alt="" id="aisles">
-  <img src="./image/list.svg" alt="" id="list">
-  <img src="./image/profile.svg" alt="" id="profile">
+  <img src="./image/home.svg" alt="" id="homeSL">
+  <img src="./image/pasillos.svg" alt="" id="aislesSL">
+  <img src="./image/list.svg" alt="" id="listSL">
+  <img src="./image/profile.svg" alt="" id="profileSL">
   </div>
   </footer>
 
       `; 
 
       divsuperLista.innerHTML=viewsuperLista;
-      let tableSL = divsuperLista.querySelector('#products');
+      let tableSL = divsuperLista.querySelector('#productsSL');
       let dataSuperList= data.results
       for (let i = 0; i < dataSuperList.length; i++) {
       let tarjetaSL = document.createElement("DIV");
@@ -72,28 +72,28 @@ export const superLista = () =>{
 
 
       //boton volver
-let back = divsuperLista.querySelector("#arrow");
+let back = divsuperLista.querySelector("#arrowbackSL");
 back.addEventListener("click", () => {
-  location.assign("#/");
+  location.assign("#/tusListas");
 });
 
 //botones navBar
-let home = divsuperLista.querySelector("#home");
+let home = divsuperLista.querySelector("#homeSL");
 home.addEventListener("click", () => {
   location.assign("#/");
-});loca
+});
 
-let viewAisles = divsuperLista.querySelector("#aisles");
+let viewAisles = divsuperLista.querySelector("#aislesSL");
 viewAisles.addEventListener("click", () => {
   location.assign("#/pasillos");
 });
 
-let viewLists = divsuperLista.querySelector("#list");
+let viewLists = divsuperLista.querySelector("#listSL");
 viewLists.addEventListener("click", () => {
   location.assign("#/tusListas");
 });
 
-let viewProfile = divsuperLista.querySelector("#profile");
+let viewProfile = divsuperLista.querySelector("#profileSL");
 viewProfile.addEventListener("click", () => {
   location.assign("#/perfil");
 });

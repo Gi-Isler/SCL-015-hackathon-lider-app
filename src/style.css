@@ -144,7 +144,7 @@
     /* Template Tus Listas */
     .myList{
       width: 100vw;
-      height: 9vh;
+      height: 98vh;
     }
 
     .headerList{
@@ -213,9 +213,9 @@
     margin-right: 3vw;
     }
     
-    /* .titleTPMC{
-      
-    } */
+    .titleTPMC{
+      width: 87vw;
+    }
 
     .products{
       overflow: scroll;
@@ -226,19 +226,45 @@
     .categories{
       position: absolute;
       margin-top: 6vh;
+      margin-left: 2.5vw;
       font-family: Bogle;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
     }
 
-    .all, .meat, .milkandeggs, .drinks, :hover{
-      border: 1.5px solid #0D346B;
-      box-sizing: border-box;
-      border-radius: 4px;
-      background-color: #ffffff;
-      color: #0D346B;
+    #sortBy{
+      margin-top: 8vh;
+      margin-left: 6.5vw;
     }
-  
+
+    .cartTPMC {
+      margin-left: -15vw;
+    }
+
+    .products{
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .image{
+      width: 100px;
+      height: 103px;
+    }
+
+    .cell{
+    height: 113px;
+    width: 34%;
+    }
+
+
+
+
+
+
+      
 
   }

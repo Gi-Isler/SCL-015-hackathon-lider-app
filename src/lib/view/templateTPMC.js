@@ -1,4 +1,5 @@
 import data from "../data/carolinaData.js"
+import {orderLowerPrice,orderDefault} from "..index.js"
 export const tpmc = () =>{
   const divtpmc = document.createElement("div");
   divtpmc.setAttribute('CLASS','tpmc');
@@ -7,9 +8,9 @@ export const tpmc = () =>{
   <header class="headerTPMC">
     <div class="contentTPMC">
       <div class="contentTPMC">
-        <img src="./image/backArrow.svg" alt="Retroceder" class="arrowback" id="arrow">
+        <img src="./image/backArrow.svg" alt="Retroceder" class="arrowback" id="backArrow">
         <h3 id="titleTPMC" class="titleTPMC">Tus Productos más comprados</h3>
-        <img src="./image/carrito_header.svg" alt="carrito" class="cart">
+        <img src="./image/carrito_header.svg" alt="carrito" class="cartTPMC">
       </div>   
       <div class="categories">
       <button id="all" class="all">Todos</button>
@@ -22,9 +23,9 @@ export const tpmc = () =>{
   <main class="mainProducts">
     <div class="order">
       <select type="option"name="Ordenar por" id="sortBy">
-        <option>Ordenar por</option>
-        <option>Menor precio</option>
-        <option>Mayor oferta</option>
+        <option value="default">Ordenar por</option>
+        <option value="lowerPrice">Menor precio</option>
+        <option value="greater offer">Mayor oferta</option>
         <option>Recomendados</option>
       </select>
     </div>
@@ -41,8 +42,12 @@ export const tpmc = () =>{
   `
    
   divtpmc.innerHTML=viewtpmc;
+  //funcion que trae la data de productos
+
   let table = divtpmc.querySelector('#products');
     let dataProducts= data.results
+
+    const allProducts =(dataProducts) =>{
     for (let i = 0; i < dataProducts.length; i++) {
     let tarjeta = document.createElement("DIV");
     let heart = document.createElement("IMG");
@@ -85,10 +90,36 @@ export const tpmc = () =>{
       addModal(info[i]);
     }
   }
+}
+
+//función de ordenar
+let select = divtpmc.querySelector("#sortBy");
+select.addEventListener("change", function () {
+
+  if (select.value === "lowerPrice") {
+    table.innerHTML = "";
+    let array = orderLowerPrice(dataProducts);
+    dataProducts = array;
+    return allProducts(dataProducts);
+  }
+
+  // else if (select.value === "alphDescending") {
+  //   let array = functions.orderZA(info);
+  //   info = array;
+  //   return addAllCharacters(info);
+  // }
+
+  else {
+    let array = orderDefault(dataProducts);
+    dataProducts = array;
+    return allProducts(dataProducts)
+  }
+});
+
   
 
   //boton volver
-let back = divtpmc.querySelector("#arrow");
+let back = divtpmc.querySelector("#backArrow");
 back.addEventListener("click", () => {
   location.assign("#/");
 });
@@ -97,7 +128,7 @@ back.addEventListener("click", () => {
 let home = divtpmc.querySelector("#home");
 home.addEventListener("click", () => {
   location.assign("#/");
-});loca
+});
 
 let viewAisles = divtpmc.querySelector("#aisles");
 viewAisles.addEventListener("click", () => {
@@ -115,5 +146,4 @@ viewProfile.addEventListener("click", () => {
 });
      return divtpmc; 
  }
-       // <img src= "${dataProducts[i].img}">
-      // <p>${dataProducts[i].Precio}</p></div>
+    
