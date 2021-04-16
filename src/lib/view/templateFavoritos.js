@@ -2,13 +2,14 @@ import data from "../data/favoritesData.js"
 export const favorites = () =>{
   const divFavorites = document.createElement("div");
   const viewFavorites = `
-  <header class="headerSuperLists">
-    <div class="contenSuperLists">
-      <img src="./image/backArrow.svg" alt="Retroceder" id="arrowbackF" class="arrowback">
-      <h3 id="titleSL" class="titleSL">Favoritos</h3>
-      
-      <img src="./image/carrito_header.svg" alt="carrito" class="cart">
-    </div>
+  <header class="headerList">
+  <div class="contentList">
+    <div class="contentTitlesList">
+      <img src="./image/backArrow.svg" alt="Retroceder" class="arrow" id="arrowbackF">
+      <h3 id="titleLists" class="listTitle">Favoritos</h3>
+      <img src="./image/carrito_header.svg" alt="carrito" class="cartList">
+    </div>   
+  </div>
   </header>
   <main class="mainSuperLists">
      <h4 id="titleSLAisle" class
@@ -46,7 +47,7 @@ export const favorites = () =>{
       tarjeta.setAttribute("id", "card");
       image.setAttribute("src", dataProducts[i].img);
       image.setAttribute("class", "image");
-      heart.setAttribute("src","./image/emptyHeart.svg");
+      heart.setAttribute("src","./image/fullHeart.svg");
       heart.setAttribute("class", "heartTPMC");
       heart.setAttribute("id", "heart");
       name.setAttribute("class", "name");
@@ -60,7 +61,7 @@ export const favorites = () =>{
       addList.setAttribute("id", "addList");
       name.innerHTML = dataProducts[i].Titulo;
       price.innerHTML = '$ ' +dataProducts[i].Precio;
-      amount.innerHTML = dataProducts[i].cantidad+dataProducts[i]["Unidad de Medida"];
+      amount.innerHTML = dataProducts[i].Cantidad+dataProducts[i]["Unidad de Medida"];
       addList.innerHTML = "Agregar al carrito"
       table.appendChild(tarjeta);
       tarjeta.appendChild(heart);

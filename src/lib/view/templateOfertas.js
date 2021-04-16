@@ -21,9 +21,6 @@ export const ofertas = () =>{
     </div>
   </header>
   <main class="mainOfferProducts">
-  <div class="offerSearch">
-  <input type="search" placeholder="¿Qué productos buscas hoy?" class="search" id="search"><img src="./image/search.svg" alt="buscar" class="searchImg">
-  </div>
     <div class="offersOrder">
       <select type="option"name="Ordenar por" id="sortBy">
         <option value="default">Ordenar por</option>
@@ -62,13 +59,12 @@ export const ofertas = () =>{
     let amount = document.createElement("P");
     let addImg = document.createElement("IMG");
     let addList = document.createElement("IMG");
-    tarjeta.setAttribute("class", "cell");
+    tarjeta.setAttribute("class", "cellOffers");
     tarjeta.setAttribute("id", "card");
     image.setAttribute("src", dataProducts[i].img);
     image.setAttribute("class", "image");
     heart.setAttribute("src","./image/emptyHeart.svg");
     heart.setAttribute("class", "heart");
-    heart.setAttribute("id", "heart");
     name.setAttribute("class", "name");
     offerPrice.setAttribute("class","offerPrice");
     price.setAttribute("class", "otherPrice");
@@ -86,6 +82,7 @@ export const ofertas = () =>{
     addList.innerHTML = "Agregar al carrito"
     table.appendChild(tarjeta);
     tarjeta.appendChild(heart);
+    heart.setAttribute("id", "heart");
     tarjeta.appendChild(image);
     tarjeta.appendChild(name);
     tarjeta.appendChild(offerPrice);
@@ -94,8 +91,8 @@ export const ofertas = () =>{
     tarjeta.appendChild(addImg);
     tarjeta.appendChild(addList);
     //aqui le decimos a la tarjeta que cuando oiga click ejecute la funcion que muestra el modal
-    tarjeta.onclick = function () {
-      addModal(info[i]);
+    heart.onclick = function () {
+      changeHeart(dataProducts[i]);
     }
   }
 }
@@ -119,6 +116,12 @@ select.addEventListener("change", function () {
   }
 });
 
+
+// funcion de cambio color corazon
+function changeHeart(dataProducts){
+  let emptyHeart = divOffers.querySelector("#heart");
+  emptyHeart.src = "./image/fullHeart.svg";
+}
 
 //función filtrar
 let all = divOffers.querySelector('#allO');
@@ -165,17 +168,6 @@ drinks.addEventListener('click',drinksBtn)
   dataProducts = filterProducts;
   allProducts(dataProducts);
 }
-
-//buscar
-let searchBar = divOffers.querySelector('#search')
-function search() {
-    let text = searchBar.value;
-    console.log(text)
-    let searchProduct = searchProducts(dataProducts, text);
-    dataProducts = searchProduct;
-    allProducts(dataProducts);
-  }
-  searchBar.addEventListener("keyup", search);
   
 
   //boton volver

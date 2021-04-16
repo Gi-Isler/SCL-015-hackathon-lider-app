@@ -65,7 +65,6 @@ export const tpmc = () =>{
     image.setAttribute("class", "image");
     heart.setAttribute("src","./image/emptyHeart.svg");
     heart.setAttribute("class", "heartTPMC");
-    heart.setAttribute("id", "heart");
     name.setAttribute("class", "name");
     price.setAttribute("class", "price");
     amount.setAttribute("class", "amount");
@@ -81,6 +80,7 @@ export const tpmc = () =>{
     addList.innerHTML = "Agregar al carrito"
     table.appendChild(tarjeta);
     tarjeta.appendChild(heart);
+    heart.setAttribute("id", "heart");
     tarjeta.appendChild(image);
     tarjeta.appendChild(name);
     tarjeta.appendChild(price);
@@ -88,8 +88,8 @@ export const tpmc = () =>{
     tarjeta.appendChild(addImg);
     tarjeta.appendChild(addList);
     //aqui le decimos a la tarjeta que cuando oiga click ejecute la funcion que muestra el modal
-    tarjeta.onclick = function () {
-      addModal(info[i]);
+    heart.onclick = function () {
+      changeHeart(dataProducts[i]);
     }
   }
 }
@@ -161,7 +161,11 @@ drinks.addEventListener('click',drinksBtn)
 }
 
 
-  
+// funcion de cambio color corazon
+function changeHeart(dataProducts){
+  let emptyHeart = divtpmc.querySelector("#heart");
+  emptyHeart.src = "./image/fullHeart.svg";
+}
 
   //boton volver
 let back = divtpmc.querySelector("#backArrow");

@@ -57,7 +57,7 @@
     .navBarIcons{
       display: flex;
       justify-content: space-around;
-      margin-top: 2vh;
+      margin-top: -1vh;
       padding: 5px;
     }
 
@@ -117,6 +117,7 @@
       font-family: Bogle;
       font-size: 18px;
       padding: 0px 12px;
+      border-color: transparent;
     }
 
     .searchImg{
@@ -162,6 +163,45 @@
       position: relative;
       margin-left: 80px;
     }
+
+
+    /* Slider */
+    .slider {
+      width: 95%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slider ul {
+      display: flex;
+      padding: -4px;
+      width: 400%;
+      animation: cambio 20s infinite alternate linear;
+    }
+
+    .slider li {
+      width: 100%;
+      list-style: none;
+    }
+
+    .slider img {
+      width: 94vw;
+    }
+
+    @keyframes cambio {
+      0% {margin-left: 0;}
+      20% {margin-left: 0;}
+      
+      25% {margin-left: -100%;}
+      45% {margin-left: -100%;}
+      
+      50% {margin-left: -200%;}
+      70% {margin-left: -200%;}
+      
+      75% {margin-left: -300%;}
+      100% {margin-left: -300%;}
+    }
+
 
     /* Template Tus Listas */
     .myList{
@@ -249,9 +289,6 @@
       position: absolute;
       margin-top: 6vh;
       margin-left: 2.5vw;
-      font-family: Bogle;
-      font-style: normal;
-      font-weight: normal;
       font-size: 14px;
     }
 
@@ -332,9 +369,9 @@
       margin-left: 80px;
       margin-top: 3px;
     }
+    
 
     /* Template Pasillos */
-
     .mainAisles{
       width: 100vw;
       height: 98vh;
@@ -349,7 +386,7 @@
     
     .mainContentAisles{
       overflow: scroll;
-      height: 82vh;
+      height: 85vh;
       margin-top: -3vh;
     }
 
@@ -364,15 +401,28 @@
     }
     
     /* Template Super Listas */
-
     .productsSL{
       overflow: scroll;
-      height: 69vh;
+      height: 77vh;
       margin-top: 3vh;
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
       flex-direction: row;
+    }
+
+    .cellSList{
+      width: 105px;
+      height: 215px;;
+      background: #FFFFFF;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .heartSL{
+      position: relative;
+      margin-left: 80px;
+      margin-top: 3px;
     }
 
 
@@ -386,78 +436,98 @@
       position: relative;
       top:6vh;
     }
+    .cellOffers{
+      width: 105px;
+      height: 262px;;
+      background: #FFFFFF;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
 
-   /* Slider */
-   .slider {
-    width: 95%;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  .slider ul {
-    display: flex;
-    padding: -4px;
-    width: 400%;
+    .otherPrice{
+      font-family: Bogle;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 22px;
+      color: rgb(0, 0, 0, 0.6) ;
+      margin-left: 5px;
+      margin-top: 2px;
+      text-decoration: line-through;
+    }
+      
+    .offerPrice{
+      font-family: Bogle;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 22px;
+      color: rgba(248, 6, 6) ;
+      margin-left: 5px;
+      margin-top: 2px;
+    }
+
+
+    /* Template Lista Favoritos */
+    .myFavLists{
+      width: 100vw;
+      height: 98.8vh;
+    }
+
+    .cellFav{
+      width: 105px;
+      height: 210px;;
+      background: #FFFFFF;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .titleSL{
+      font-family: Bogle_Bold;
+      font-size: 18px;
+      margin-left: 2.5vw;
+      margin-top: 2vh;
+    }
+
+    .productsFav{
+      overflow: scroll;
+      height: 35vh;
+      margin-top: 3vh;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+   
+    .createList{
+      margin-left: 5vw;
+      position: relative;
+    }
     
-    animation: cambio 20s infinite alternate linear;
-  }
+    .contenSuperLists{
+      display:flex;
+      margin: 8px 0 0 21px;
+    }
+
+    h4{
+      font-family: Bogle_Black;
+      font-size: 20px;
+      margin: 23px 0 0 22px;
+    }
   
-  .slider li {
-    width: 100%;
-    list-style: none;
-  }
-  
-  .slider img {
-    width: 94vw;
-  }
-  
-  @keyframes cambio {
-    0% {margin-left: 0;}
-    20% {margin-left: 0;}
-    
-    25% {margin-left: -100%;}
-    45% {margin-left: -100%;}
-    
-    50% {margin-left: -200%;}
-    70% {margin-left: -200%;}
-    
-    75% {margin-left: -300%;}
-    100% {margin-left: -300%;}
-  }
-  
-  /* template ultima compra */
-.mainLastBuy{
-  width: 100vw;
-  height: 100vh;
-}
+
+  /* Template Ultima Compra */
+    .mainLastBuy{
+      width: 100vw;
+      height: 100vh;
+    }
   
     .lastBuy {
       height: 520px;
       margin-left: 5vw;
     }
 
-/* template ofertas */
-.otherPrice{
-font-family: Bogle;
-font-style: normal;
-font-weight: bold;
-font-size: 12px;
-line-height: 22px;
-color: rgb(0, 0, 0, 0.6) ;
-margin-left: 5px;
-margin-top: 2px;
-text-decoration: line-through;
-}
 
-.offerPrice{
-  font-family: Bogle;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 22px;
-  color: rgba(248, 6, 6) ;
-  margin-left: 5px;
-  margin-top: 2px;
-  }
+
 
   }

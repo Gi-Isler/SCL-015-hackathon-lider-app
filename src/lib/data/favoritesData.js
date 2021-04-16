@@ -3,7 +3,7 @@ export default{
     {
       "Id": 1,
       "Código de Barras:": 7802130000676,
-      Titulo: "Pack cervezas",
+      Titulo: "Pack cervezas Lager 6 Latas",
       "Palabra de busqueda": "Cerveza",
       "Marca:": "Becker",
       Seccion: "Cervezas y Sidras",
@@ -17,7 +17,7 @@ export default{
     {
       "Id": 2,
       "Código de Barras:": 7891150053120,
-      Titulo: "Acondicionador Dove Ritual de Reparación",
+      Titulo: 'Acondicionador Dove Reparación',
       "Palabra de busqueda": "Acondicionador",
       "Marca:": "Dove",
       Seccion: "Cuidado personal",
@@ -31,7 +31,7 @@ export default{
     {
       "Id": 3,
       "Código de Barras:": 7500435142557,
-      Titulo: "Shampoo Head & Shoulders Hidratación Aceite de Coco",
+      Titulo: 'Shampoo Head & Shoulders Coco',
       "Palabra de busqueda": "Shampoo",
       "Marca:": "Head & Shoulders",
       Seccion: "Cuidado personal",
@@ -59,7 +59,7 @@ export default{
     {
       "Id": 5,
       "Código de Barras:": 7802337801038,
-      Titulo: "Sucedáneo de Jugo de Limón Traverso",
+      Titulo: "Sucedáneo de Jugo de Limón ",
       "Palabra de busqueda": "Jugo de Limón",
       "Marca:": "Traverso",
       Seccion: "Despensa",
@@ -87,7 +87,7 @@ export default{
     {
       "Id": 7,
       "Código de Barras:": 7802900230258,
-      Titulo: "Yogurt Batido Soprole Yoghito Vainilla",
+      Titulo: "Yogurt Batido Yoghito Vainilla",
       "Palabra de busqueda": "Yogurt",
       "Marca:": "Soprole",
       Seccion: "Lácteos y Huevos",
@@ -112,5 +112,33 @@ export default{
       Cantidad: 290,
       img: "https://jumbo.vteximg.com.br/arquivos/ids/372136/Snack-De-Todito-120-g.jpg?v=637437281447530000"
     },
+    {
+      Id: 9,
+      'Código de Barras:': 7801620008123,
+      Titulo: 'Bebida Zero Sabor Piña',
+      'Palabra de búsqueda': 'Bebida',
+      'Marca:': 'CCU',
+      Seccion: 'Bebidas, aguas y jugos',
+      'Sección Secundaria': 'Bebidas Gaseosas',
+      Precio: 1190,
+      Promocion: 1000,
+      'Unidad de Medida': 'mL',
+      Cantidad: 2000,
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3duxWcHARSl4Z-cHeoqjOTYEiF04XfkJT3jLS5khXMT57NvD791twOZmpHvgENF6xhY_i2jU&usqp=CAc',
+    },
+    {
+      Id: 10,
+      'Código de Barras:': 7893000065253,
+      Titulo: 'Margarina Vegetal de mesa',
+      'Palabra de búsqueda': 'Margarina',
+      'Marca:': 'Qualy',
+      Seccion: 'Lácteos y Huevos',
+      'Sección Secundaria': 'Margarinas',
+      Precio: 1190,
+      Promocion: 1070,
+      'Unidad de Medida': 'grs',
+      Cantidad: 500,
+      img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSoEA6UU1r42MZ3atvzEX5oulWrxTdxLhZOsFiil2WMvLqXXOAf7A89eGeX1ljBsibX5B7OJmq&usqp=CAc',
+    }
   ]
 }

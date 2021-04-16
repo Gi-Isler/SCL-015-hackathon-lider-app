@@ -1,6 +1,7 @@
 export const tusListas = () =>{
  const divMisListas = document.createElement("div");
- divMisListas.setAttribute('CLASS','myList');
+divMisListas.setAttribute("CLASS","myList");
+console.log(divMisListas);
  const viewMisListas = `
  <header class="headerList">
  <div class="contentList">
@@ -14,7 +15,6 @@ export const tusListas = () =>{
  <main>
    <img id="myLists" class="myLists" src="image/tusListas2.svg" type="button">
    <img id="superLists" class="superLists" src="image/superListas.svg" type="button">
-   <img id="lastBuys" class="lastBuys" src="image/tusComprasListas1.svg" type="button">  
  </main>
  <footer class="navBar">
  <div class="navBarIcons">
@@ -34,10 +34,10 @@ let back = divMisListas.querySelector("#arrow");
  });
 
  //botones banners
- let lastBuys = divMisListas.querySelector("#lastBuys");
- lastBuys.addEventListener("click", () => {
-   location.assign("#/comprasAnteriores");
- });
+//  let lastBuys = divMisListas.querySelector("#lastBuys");
+//  lastBuys.addEventListener("click", () => {
+//    location.assign("#/comprasAnteriores");
+//  });
 
  let myLists = divMisListas.querySelector("#myLists");
  myLists.addEventListener("click", () => {

@@ -97,15 +97,15 @@ let select = divpantry.querySelector("#sortBy");
 select.addEventListener("change", function () {
 
   if (select.value === "lowerPrice") {
-    table.innerHTML = "";
-    let array = orderLowerPrice(dataProducts);
+    tablePantry.innerHTML = "";
+    let array = orderLowerPrice(dataProductsPantry);
     dataProducts = array;
     return allProducts(dataProducts);
   }
 
   else if(select.value === "default"){
-    table.innerHTML = "";
-    let array = orderDefault(dataProducts);
+    tablePantry.innerHTML = "";
+    let array = orderDefault(dataProductsPantry);
     dataProducts = array;
     return allProducts(dataProducts)
   }

@@ -1,20 +1,25 @@
 import data from "../data/favoritesData.js"
 export const favoritesList = () =>{
   const divFavoritesList = document.createElement("div");
+  divFavoritesList.setAttribute("CLASS","myFavLists");
   const viewFavoritesList = `
-  <header class="headerSuperLists">
-    <div class="contenSuperLists">
-      <img src="./image/backArrow.svg" alt="Retroceder" id="arrowbackF" class="arrowback">
-      <h3 id="titleSL" class="titleSL">Tus Listas</h3>
-      
-      <img src="./image/carrito_header.svg" alt="carrito" class="cart">
-    </div>
-  </header>
+  <header class="headerList">
+ <div class="contentList">
+   <div class="contentTitlesList">
+     <img src="./image/backArrow.svg" alt="Retroceder" class="arrow" id="arrowbackF">
+     <h3 id="titleLists" class="listTitle">Tus Listas</h3>
+     <img src="./image/carrito_header.svg" alt="carrito" class="cartList">
+   </div>   
+ </div>
+ </header>
   <main class="mainSuperLists">
      <h4 id="titleSLAisle" class
 "titleSLAisle">Favoritos</h4>
-     <h5 id="titleSLAisleProducts" class="titleSLAisleProducts">Productos</h5><h4 class="moreTitle" id="forwardFavoritos">Ver más</h4>
-    <div class="productsSL" id="productsF"></div> 
+     <h4 class="moreTitle" id="forwardFavoritos">Ver más</h4>
+    <div class="productsFav" id="productsF"></div> 
+    <div class= btnCL>
+      <img id="createList" class="createList" src="image/createLists.svg" type="button">
+    </div>
   </main>
   <footer class="navBar">
     <div class="navBarIcons">
@@ -50,7 +55,7 @@ export const favoritesList = () =>{
       let priceF = document.createElement("P");
       let amountF = document.createElement("P");
       let addCartF = document.createElement("IMG");
-      tarjetaF.setAttribute("class", "cell");
+      tarjetaF.setAttribute("class", "cellFav");
       tarjetaF.setAttribute("id", "cardF");
       heartF.setAttribute("src","./image/fullHeart.svg");
       heartF.setAttribute("class", "heartSL");

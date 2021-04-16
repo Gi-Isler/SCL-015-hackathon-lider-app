@@ -1,19 +1,20 @@
 import data from "../data/superlistaData.js"
 export const superLists = () =>{
   const divsuperLists = document.createElement("div");
+  divsuperLists.setAttribute('CLASS','myList');
   const viewsuperLists = `
-  <header class="headerSuperLists">
-    <div class="contenSuperLists">
-      <img src="./image/backArrow.svg" alt="Retroceder" id="arrowbackSL" class="arrowback">
-      <h3 id="titleSL" class="titleSL">Super Listas</h3>
-      
-      <img src="./image/carrito_header.svg" alt="carrito" class="cart">
-    </div>
+  <header class="headerList">
+  <div class="contentList">
+    <div class="contentTitlesList">
+      <img src="./image/backArrow.svg" alt="Retroceder" class="arrow" id="arrowbackSL">
+      <h3 id="titleLists" class="listTitle">Super Listas</h3>
+      <img src="./image/carrito_header.svg" alt="carrito" class="cartList">
+    </div>   
+  </div>
   </header>
   <main class="mainSuperLists">
      <h4 id="titleSLAisle" class
 "titleSLAisle">Limpieza</h4>
-     <h5 id="titleSLAisleProducts" class="titleSLAisleProducts">Productos</h5>
     <div class="productsSL" id="productsSL"></div> 
   </main>
   <footer class="navBar">
@@ -38,7 +39,7 @@ export const superLists = () =>{
       let priceSL = document.createElement("P");
       let amountSL = document.createElement("P");
       let addCartSL = document.createElement("IMG");
-      tarjetaSL.setAttribute("class", "cell");
+      tarjetaSL.setAttribute("class", "cellSList");
       tarjetaSL.setAttribute("id", "cardSL");
       heartSL.setAttribute("src","./image/emptyHeart.svg");
       heartSL.setAttribute("class", "heartSL");

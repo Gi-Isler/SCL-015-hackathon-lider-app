@@ -577,7 +577,7 @@ export default{
   {
     Id: 42,
     'Código de Barras:': 7790520014184,
-    Titulo: 'Desinfectante Fragancia Lavanda',
+    Titulo: 'Desinfectante Lavanda',
     'Palabra de búsqueda': 'Aerosol',
     'Marca:': 'Lysoform',
     Seccion: 'Limpieza',
