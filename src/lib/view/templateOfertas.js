@@ -13,10 +13,10 @@ export const ofertas = () =>{
         <img src="./image/carrito_header.svg" alt="carrito" class="cartTPMC">
       </div>   
       <div class="categories">
-      <button id="all" class="all">Todos</button>
-      <button id="meat" class="meat">Carne, pollo y mariscos</button>
-      <button id="milkandeggs" class="milkandeggs">Lácteos y Huevos</button>
-      <button id="drinks" class="drinks">Bebidas, aguas y jugos</button>
+        <img src="./image/all.svg" alt="Todos" class="all" id="allO" type="button">
+        <img src="./image/meat.svg" alt="Carne, pollo y mariscos" class="meat" id="meatO" type="button">
+        <img src="./image/milk.svg" alt="Lácteos y Huevos" class="milkandeggs" id="milkandeggsO" type="button">
+        <img src="./image/drinks.svg" alt="Bebidas, aguas y jugos" class="drinks" id="drinksO" type="button">
       </div>  
     </div>
   </header>
@@ -117,7 +117,7 @@ select.addEventListener("change", function () {
 
 
 //función filtrar
-let all = divOffers.querySelector('#all');
+let all = divOffers.querySelector('#allO');
  all.addEventListener('click',allBtn)
 
  function allBtn(){
@@ -126,7 +126,7 @@ let all = divOffers.querySelector('#all');
   allProducts(dataProducts);
 }
 
-let meat = divOffers.querySelector('#meat');
+let meat = divOffers.querySelector('#meatO');
  meat.addEventListener('click',meatBtn)
 
  function meatBtn(){
@@ -138,7 +138,7 @@ let meat = divOffers.querySelector('#meat');
   allProducts(dataProducts);
 }
 
-let milkandeggs = divOffers.querySelector('#milkandeggs');
+let milkandeggs = divOffers.querySelector('#milkandeggsO');
 milkandeggs.addEventListener('click',milkBtn)
 
  function milkBtn(){
@@ -150,7 +150,7 @@ milkandeggs.addEventListener('click',milkBtn)
   allProducts(dataProducts);
 }
 
-let drinks = divOffers.querySelector('#drinks');
+let drinks = divOffers.querySelector('#drinksO');
 drinks.addEventListener('click',drinksBtn)
 
  function drinksBtn(){

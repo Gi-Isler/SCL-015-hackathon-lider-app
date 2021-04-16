@@ -8,6 +8,7 @@ import {ofertas} from './view/templateOfertas.js'
 import {favoritesList} from './view/templateListaFavoritos.js'
 import {favorites} from './view/templateFavoritos.js'
 import {lastBuys} from './view/templateComprasAnteriores.js'
+import {lastBuy} from './view/templateUltimaCompra.js'
 
 export const changeRouter = (hash) => {
   if (hash === '#/tusListas') {
@@ -34,6 +35,9 @@ export const changeRouter = (hash) => {
   if (hash === '#/comprasAnteriores') {
     return showTemplate(hash);
   }
+  if (hash === '#/ultimaCompra') {
+    return showTemplate(hash);
+  }
   return showTemplate(hash);
 };
 
@@ -58,7 +62,9 @@ export const showTemplate = (hash) => {
     containerRoot.appendChild(favorites());
   }else if (hash === '#/comprasAnteriores') {
       containerRoot.appendChild(lastBuys());
-  }else {
+  }else if (hash === '#/ultimaCompra') {
+    containerRoot.appendChild(lastBuy());
+}else {
     containerRoot.innerHTML = 'la página no existe';
   }
 };

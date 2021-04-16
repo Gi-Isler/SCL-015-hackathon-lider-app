@@ -12,9 +12,9 @@ export const tusListas = () =>{
  </div>
  </header>
  <main>
-   <img id="lastBuys" class="lastBuys" src="image/comprasAnteriores.svg" type="button">  
    <img id="myLists" class="myLists" src="image/tusListas2.svg" type="button">
    <img id="superLists" class="superLists" src="image/superListas.svg" type="button">
+   <img id="lastBuys" class="lastBuys" src="image/tusComprasListas1.svg" type="button">  
  </main>
  <footer class="navBar">
  <div class="navBarIcons">

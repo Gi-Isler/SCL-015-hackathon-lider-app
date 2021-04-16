@@ -13,10 +13,10 @@ export const despensa = () =>{
         <img src="./image/carrito_header.svg" alt="carrito" class="cartPantry">
       </div>   
       <div class="categories">
-      <button id="allPantry" class="allPantry">Todos</button>
-      <button id="meatPantry" class="meatPantry">Carne, pollo y mariscos</button>
-      <button id="milkandeggsPantry" class="milkandeggsPantry">Lácteos y Huevos</button>
-      <button id="drinksPantry" class="drinksPantry">Bebidas, aguas y jugos</button>
+        <img src="./image/all.svg" alt="Todos" class="all" id="allPantry" type="button">
+        <img src="./image/meat.svg" alt="Carne, pollo y mariscos" class="meat" id="meatPantry" type="button">
+        <img src="./image/milk.svg" alt="Lácteos y Huevos" class="milkandeggs" id="milkandeggsPantry" type="button">
+        <img src="./image/drinks.svg" alt="Bebidas, aguas y jugos" class="drinks" id="drinksPantry" type="button">
       </div>  
     </div>
   </header>

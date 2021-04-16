@@ -142,6 +142,7 @@
       position: absolute;
       margin: -22px 0 0 84%;
     }
+
     .contTPMCHome{
       display: flex;
       justify-content: space-evenly;
@@ -149,6 +150,7 @@
       height: 36vh;
       margin-top: 0.5vh;
     }
+
     .cellHome{
       width: 105px;
       height: 240px;;
@@ -254,8 +256,8 @@
     }
 
     #sortBy{
-      margin-top: 8vh;
-      margin-left: 6.5vw;
+      margin-top: 9vh;
+      margin-left: 4.5vw;
     }
 
     .cartTPMC {
@@ -374,7 +376,6 @@
     }
 
 
-
     /* Template Ofertas */
     .mainOfferProducts{
       display: flex;
@@ -424,7 +425,16 @@
     100% {margin-left: -300%;}
   }
   
-
+  /* template ultima compra */
+.mainLastBuy{
+  width: 100vw;
+  height: 100vh;
+}
+  
+    .lastBuy {
+      height: 520px;
+      margin-left: 5vw;
+    }
 
 
 

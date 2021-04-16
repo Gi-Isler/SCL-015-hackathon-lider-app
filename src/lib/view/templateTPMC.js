@@ -12,6 +12,7 @@ export const tpmc = () =>{
         <h3 id="titleTPMC" class="titleTPMC">Tus Productos más comprados</h3>
         <img src="./image/carrito_header.svg" alt="carrito" class="cartTPMC">
       </div>   
+      
       <div class="categories">
         <img src="./image/all.svg" alt="Todos" class="all" id="all" type="button">
         <img src="./image/meat.svg" alt="Carne, pollo y mariscos" class="meat" id="meat" type="button">

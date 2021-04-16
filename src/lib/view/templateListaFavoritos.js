@@ -28,7 +28,7 @@ export const favoritesList = () =>{
       `; 
 
       divFavoritesList.innerHTML=viewFavoritesList;
-      
+
 // ir a favoritos
       let forward = divFavoritesList.querySelector('#forwardFavoritos');
       forward.addEventListener("click",() => {
@@ -38,7 +38,7 @@ export const favoritesList = () =>{
       
       let dataProducts = data.results
       let homeProducts=[];
-      homeProducts = dataProducts.splice(0,3);
+      homeProducts = dataProducts.filter(e => e.Id <= 3);
       console.log(homeProducts);
             
       let tableF = divFavoritesList.querySelector('#productsF');

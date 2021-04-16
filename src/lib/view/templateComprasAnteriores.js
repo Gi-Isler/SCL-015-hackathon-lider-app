@@ -4,13 +4,13 @@ export const lastBuys = () =>{
     const viewLastBuys = `
     <header class="headerAisles">
       <div class="contenAisles">
-         <img src="./image/backArrow.svg" alt="Retroceder" id="arrowbackAisles" class="arrowback">
+         <img src="./image/backArrow.svg" alt="Retroceder" id="arrow" class="arrowback">
          <h3 id="titleAisles" class="titleAisles">Compras Anteriores</h3>
          <img src="./image/carrito_header.svg" alt="carrito" class="cartList">
       </div>
      </header>
      <main class="mainContentAisles">
-       <img id="lastBuys" class="lastBuys" src="./image/ultimaCompra1.svg" type="button"> 
+       <img id="forwardLastBuy" class="lastBuys" src="./image/ultimaCompra1.svg" type="button"> 
        <img  class="lastBuys" src="./image/ultimaCompra2.svg" type="button"> 
        <img  class="lastBuys" src="./image/ultimaCompra3.svg" type="button"> 
        <img  class="lastBuys" src="./image/ultimaCompra4.svg" type="button"> 
@@ -28,6 +28,42 @@ export const lastBuys = () =>{
   `;
      
    divLastBuys.innerHTML=viewLastBuys;
+
+    //boton volver
+    let back = divLastBuys.querySelector("#arrow");
+    back.addEventListener("click", () => {
+    location.assign("#/tusListas");
+    });
+
+
+    //va a ultima boleta
+
+    let goTPMC = divLastBuys.querySelector('#forwardLastBuy');
+    goTPMC.addEventListener("click",() => {
+    location.assign("#/ultimaCompra");
+    })
+
+
+    //navbar
+   let home = divLastBuys.querySelector("#home");
+   home.addEventListener("click", () => {
+     location.assign("#/");
+   });
+ 
+   let viewAisles = divLastBuys.querySelector("#aisles");
+   viewAisles.addEventListener("click", () => {
+     location.assign("#/pasillos");
+   });
+ 
+   let viewLists = divLastBuys.querySelector("#list");
+   viewLists.addEventListener("click", () => {
+     location.assign("#/tusListas");
+   });
+ 
+   let viewProfile = divLastBuys.querySelector("#profile");
+   viewProfile.addEventListener("click", () => {
+     location.assign("#/perfil");
+   });
 
    return divLastBuys;
 }

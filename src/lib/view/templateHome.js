@@ -47,7 +47,7 @@ export const home = () => {
 
 let dataProducts = data.results
 let homeProducts=[];
-homeProducts = dataProducts.splice(4,3);
+homeProducts = dataProducts.filter(e => e.Id <= 3);
 console.log(homeProducts);
 
 let table = divHome.querySelector('#table')
