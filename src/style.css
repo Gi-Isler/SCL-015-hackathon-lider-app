@@ -436,7 +436,28 @@
       margin-left: 5vw;
     }
 
+/* template ofertas */
+.otherPrice{
+font-family: Bogle;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 22px;
+color: rgb(0, 0, 0, 0.6) ;
+margin-left: 5px;
+margin-top: 2px;
+text-decoration: line-through;
+}
 
-
+.offerPrice{
+  font-family: Bogle;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 22px;
+  color: rgba(248, 6, 6) ;
+  margin-left: 5px;
+  margin-top: 2px;
+  }
 
   }

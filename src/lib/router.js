@@ -5,6 +5,7 @@ import { tusListas } from './view/templateTusListas.js';
 import { superLists } from './view/templateSuperLista.js';
 import { aisles } from './view/templatePasillos.js'
 import {ofertas} from './view/templateOfertas.js'
+import {despensa} from './view/templateDespensa.js'
 import {favoritesList} from './view/templateListaFavoritos.js'
 import {favorites} from './view/templateFavoritos.js'
 import {lastBuys} from './view/templateComprasAnteriores.js'
@@ -24,6 +25,9 @@ export const changeRouter = (hash) => {
     return showTemplate(hash);
   }
   if (hash === '#/offers') {
+    return showTemplate(hash);
+  }
+  if (hash === '#/despensa') {
     return showTemplate(hash);
   }
   if (hash === '#/listas') {
@@ -56,6 +60,8 @@ export const showTemplate = (hash) => {
     containerRoot.appendChild(aisles());
   }else if (hash === '#/offers') {
     containerRoot.appendChild(ofertas());
+  }else if (hash === '#/despensa') {
+    containerRoot.appendChild(despensa());
   }else if (hash === '#/listas') {
     containerRoot.appendChild(favoritesList());
   }else if (hash === '#/favoritos') {

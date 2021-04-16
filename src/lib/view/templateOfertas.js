@@ -57,6 +57,7 @@ export const ofertas = () =>{
     let heart = document.createElement("IMG");
     let image = document.createElement("IMG");
     let name = document.createElement("P");
+    let offerPrice = document.createElement("P");
     let price = document.createElement("P");
     let amount = document.createElement("P");
     let addImg = document.createElement("IMG");
@@ -69,7 +70,8 @@ export const ofertas = () =>{
     heart.setAttribute("class", "heart");
     heart.setAttribute("id", "heart");
     name.setAttribute("class", "name");
-    price.setAttribute("class", "price");
+    offerPrice.setAttribute("class","offerPrice");
+    price.setAttribute("class", "otherPrice");
     amount.setAttribute("class", "amount");
     addImg.setAttribute("src", "./image/addList.svg");
     addImg.setAttribute("class", "addImg");
@@ -78,6 +80,7 @@ export const ofertas = () =>{
     addList.setAttribute("class", "addList");
     addList.setAttribute("id", "addList");
     name.innerHTML = dataProducts[i].Titulo;
+    offerPrice.innerHTML= '$ ' +dataProducts[i].Promocion;
     price.innerHTML = '$ ' +dataProducts[i].Precio;
     amount.innerHTML = dataProducts[i].cantidad+dataProducts[i]["Unidad de Medida"];
     addList.innerHTML = "Agregar al carrito"
@@ -85,6 +88,7 @@ export const ofertas = () =>{
     tarjeta.appendChild(heart);
     tarjeta.appendChild(image);
     tarjeta.appendChild(name);
+    tarjeta.appendChild(offerPrice);
     tarjeta.appendChild(price);
     tarjeta.appendChild(amount);
     tarjeta.appendChild(addImg);
@@ -177,7 +181,7 @@ function search() {
   //boton volver
 let back = divOffers.querySelector("#backArrow");
 back.addEventListener("click", () => {
-  location.assign("#/");
+  location.assign("#/pasillos");
 });
 
 //botones navBar

@@ -62,7 +62,7 @@ export const aisles = () =>{
 
     let pantryHall = divpasillos.querySelector("#pantryHall");
     pantryHall.addEventListener("click", () => {
-      location.assign("#/pantryHall");
+      location.assign("#/despensa");
     });
 
     //botones navBar

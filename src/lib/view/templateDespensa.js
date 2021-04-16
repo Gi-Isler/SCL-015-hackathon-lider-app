@@ -12,12 +12,6 @@ export const despensa = () =>{
         <h3 id="titlePantry" class="titlePantry">Despensa</h3>
         <img src="./image/carrito_header.svg" alt="carrito" class="cartPantry">
       </div>   
-      <div class="categories">
-        <img src="./image/all.svg" alt="Todos" class="all" id="allPantry" type="button">
-        <img src="./image/meat.svg" alt="Carne, pollo y mariscos" class="meat" id="meatPantry" type="button">
-        <img src="./image/milk.svg" alt="Lácteos y Huevos" class="milkandeggs" id="milkandeggsPantry" type="button">
-        <img src="./image/drinks.svg" alt="Bebidas, aguas y jugos" class="drinks" id="drinksPantry" type="button">
-      </div>  
     </div>
   </header>
   <main class="mainProductsPantry">
@@ -46,13 +40,16 @@ export const despensa = () =>{
   divpantry.innerHTML=viewpantry;
   //funcion que trae la data de productos
 
-  let tablepantry = divpantry.querySelector('#productsPantry');
-    let dataProductsPantry= data.results
+  let tablePantry = divpantry.querySelector('#productsPantry');
+    let dataProducts= data.results
+    let Seccion = 'Despensa';
+    let dataProductsPantry = productsFilter(dataProducts,Seccion);
+    console.log(dataProductsPantry);
 
     window.addEventListener("load", allProducts(dataProductsPantry));
    function allProducts(dataProductsPantry){
     for (let i = 0; i < dataProductsPantry.length; i++) {
-    let tarjetapantry = document.createElement("DIV");
+    let tarjetaPantry = document.createElement("DIV");
     let heartPantry = document.createElement("IMG");
     let imagePantry = document.createElement("IMG");
     let namePantry = document.createElement("P");
@@ -62,7 +59,7 @@ export const despensa = () =>{
     let addListPantry = document.createElement("IMG");
     tarjetaPantry.setAttribute("class", "cellPantry");
     tarjetaPantry.setAttribute("id", "cardPantry");
-    imagePantry.setAttribute("src", dataProducts[i].img);
+    imagePantry.setAttribute("src", dataProductsPantry[i].img);
     imagePantry.setAttribute("class", "imagePantry");
     heartPantry.setAttribute("src","./image/emptyHeart.svg");
     heartPantry.setAttribute("class", "heartPantry");
@@ -76,9 +73,9 @@ export const despensa = () =>{
     addListPantry.setAttribute("src", "./image/addCart.svg");
     addListPantry.setAttribute("class", "addListPantry");
     addListPantry.setAttribute("id", "addListPantry");
-    namePantry.innerHTML = dataProducts[i].Titulo;
-    pricePantry.innerHTML = '$ ' +dataProducts[i].Precio;
-    amountPantry.innerHTML = dataProducts[i].cantidad+dataProducts[i]["Unidad de Medida"];
+    namePantry.innerHTML = dataProductsPantry[i].Titulo;
+    pricePantry.innerHTML = '$ ' +dataProductsPantry[i].Precio;
+    amountPantry.innerHTML = dataProductsPantry[i].cantidad+dataProductsPantry[i]["Unidad de Medida"];
     addListPantry.innerHTML = "Agregar al carrito"
     tablePantry.appendChild(tarjetaPantry);
     tarjetaPantry.appendChild(heartPantry);
@@ -113,54 +110,6 @@ select.addEventListener("change", function () {
     return allProducts(dataProducts)
   }
 });
-
-
-//función filtrar
-let all = divpantry.querySelector('#all');
- all.addEventListener('click',allBtn)
-
- function allBtn(){
-  table.innerHTML="";
-  dataProducts = data.results
-  allProducts(dataProducts);
-}
-
-let meat = divpantry.querySelector('#meat');
- meat.addEventListener('click',meatBtn)
-
- function meatBtn(){
-   table.innerHTML="";
-   let Seccion = 'Carne,Pollo y Mariscos';
-   let filterProducts = productsFilter(dataProducts,Seccion);
-   console.log(filterProducts);
-  dataProducts = filterProducts;
-  allProducts(dataProducts);
-}
-
-let milkandeggs = divpantry.querySelector('#milkandeggs');
-milkandeggs.addEventListener('click',milkBtn)
-
- function milkBtn(){
-   table.innerHTML="";
-   let Seccion = 'Lácteos y Huevos';
-   let filterProducts = productsFilter(dataProducts,Seccion);
-   console.log(filterProducts);
-  dataProducts = filterProducts;
-  allProducts(dataProducts);
-}
-
-let drinks = divpantry.querySelector('#drinks');
-drinks.addEventListener('click',drinksBtn)
-
- function drinksBtn(){
-   table.innerHTML="";
-   let Seccion = 'Bebidas, aguas y jugos';
-   let filterProducts = productsFilter(dataProducts,Seccion);
-   console.log(filterProducts);
-  dataProducts = filterProducts;
-  allProducts(dataProducts);
-}
-
 
   
 
